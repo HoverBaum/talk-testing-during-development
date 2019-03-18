@@ -1,7 +1,8 @@
-import './wrapper.css'
-
 const Wrapper = ({children}) => (
-  <div className="wrapper">
+  <div style={{
+    maxWidth: '120rem',
+    margin: '3rem'
+  }}>
     {children}
   </div>
 )
