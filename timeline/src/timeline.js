@@ -20,18 +20,18 @@ const shouldRenderWeekend = (currentDay, allDays) => isFriday(currentDay) && cur
 const Timeline = ({data = []}) => (
   <div className="timeline">
     {fillDays(data, typeMap).map((day, index) => (
-      <>
+      <React.Fragment key={index}>
         <div className={`timeline__day ${isFriday(index) ? 'timeline__day_friday' : ''}`}>
-          {day.parts.map(part => (
-            <div className="timeline__part" style={{backgroundColor: part.color}}>
+          {day.parts.map((part, key) => (
+            <div key={key} className="timeline__part" style={{backgroundColor: part.color}}>
               <img src={`images/${part.emojiImg}`} alt={part.emojiImg.replace(/\..*$/, '')} />
             </div>
           ))}
         </div>
         {shouldRenderWeekend(index, data.length) ? (
-          <div class="timeline__weekend"></div>
+          <div className="timeline__weekend"></div>
         ) : ''}
-      </>
+      </React.Fragment>
     ))}
   </div>
 )

@@ -1,11 +1,21 @@
+import { Head } from 'mdx-deck'
+import Timeline from '../timeline/src/timeline'
+import Wrapper from './components/wrapper'
+
+<Head>
+  <title>Testing</title>
+</Head>
+
+<!-- Presentation start -->
+
 # Testing
 
 ---
 
-import Timeline from '../timeline/src/timeline'
+import longTestingData from './scenarios/longTesting'
 
-<Timeline
-  data={[{
-    types: ['perfect']
-  }]}
-/>
+<Wrapper>
+  <Timeline
+    data={longTestingData}
+  />
+</Wrapper>
