@@ -1,6 +1,7 @@
+
 .timeline {
   width: 100%;
-  height: 300px;
+  min-height: 20rem;
   border: 1px solid #333334;
   display: flex;
   flex-direction: row;
@@ -27,5 +28,5 @@
   align-self: center;
 }
 .timeline__weekend {
-  width: 2rem;
+  padding: 0.5rem;
 }
