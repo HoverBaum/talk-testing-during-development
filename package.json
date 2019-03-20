@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "mdx-deck index.mdx",
+    "start": "mdx-deck index.mdx --port 8282",
     "build": "rm -rf dist && mdx-deck build index.mdx"
   },
   "author": "",
