@@ -4,7 +4,7 @@ workflow "New workflow" {
 }
 
 action "Deploy" {
-  uses = "maxheld83/ghpages"
+  uses = "maxheld83/ghpages@v0.2.1"
   secrets = ["GH_PAT"]
   env = {
     BUILD_DIR = "dist/"
