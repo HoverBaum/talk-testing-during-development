@@ -11,6 +11,6 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "mdx-deck": "^2.0.0"
+    "mdx-deck": "^2.0.6"
   }
 }
