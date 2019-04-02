@@ -1,4 +1,6 @@
-import { Head } from 'mdx-deck'
+import { Head, Notes } from 'mdx-deck'
+import { Split } from 'mdx-deck/layouts'
+
 import Timeline from './components/timeline/timeline'
 import Quote from './components/quote'
 import Wrapper from './components/wrapper'
@@ -15,15 +17,51 @@ import Wrapper from './components/wrapper'
 
 ---
 
-intro to selfe
+export default Split
+
+![](images/portrait.jpg)
+
+## Hendrik
+
+Developer for fun 🎉
 
 ---
 
-motivation, wieso testing und wie man es macht wichtig
+export default Split
 
-Dafür: Beispiele
+![](images/testing-detective.png)
+
+## Testing
+
+- Find bugs before users do
+- Ensure we fulfil specification
+
+Timeinvestment
+
+<Notes>
+  Examples to show why how we test is important
+</Notes>
 
 ---
+
+## Legend
+
+![](images/meetings-calendar.png) Meetings
+
+![](images/working-2-construction.png) Work on product
+
+![](images/testing-detective.png) Manual testing
+
+![](images/releasing-rocket.png) Releasing software
+
+<Notes>
+  Most people meet every two weeks.
+  Because "scrum" or "agile".
+</Notes>
+
+---
+
+## Codefreeze
 
 import longTestingData from './scenarios/longTesting'
 
@@ -35,13 +73,29 @@ import longTestingData from './scenarios/longTesting'
 
 ---
 
-Spread testing out
+## More Releases
+
+import splitTestingData from './scenarios/splitTesting'
+
+<Wrapper>
+  <Timeline
+    data={splitTestingData}
+  />
+</Wrapper>
 
 --- 
 
-compare the two
+| Dev | Test | Meet | Releasing | Releases |
+| --- | --- | --- | --- | --- |
+| 11 | 5 | 2 | 1 | 1 |
+| 14 | 2 | 2 | 2 | 8 |
 
-IT IS ALL ABOUT CYCLE
+---
+
+| Dev | Test | Meet | Releasing | Releases | Bugs |
+| --- | --- | --- | --- | --- | --- |
+| 11 | 5 | 2 | 1 | 1 | 🐛🐛🐛 | 
+| 14 | 2 | 2 | 2 | 8 | 🐛 | 
 
 ---
 
@@ -51,7 +105,25 @@ IT IS ALL ABOUT CYCLES
 
 ---
 
-present perfect flow
+## High performing organizations.
+
+---
+
+## Perfect day
+
+![](images/perfect-day.png)
+
+---
+
+## My dream 🤩
+
+import perfectTestingData from './scenarios/perfect'
+
+<Wrapper>
+  <Timeline
+    data={perfectTestingData}
+  />
+</Wrapper>
 
 ---
 
