@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "@emotion/core": "^10.0.10",
     "mdx-deck": "^2.0.6"
   }
 }

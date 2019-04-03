@@ -7,26 +7,32 @@
   flex-direction: row;
   margin: 2rem auto;
 }
+
 .timeline__day {
   flex-basis: 100%;
-  border-right: 1px solid #ececec;
+  border-right: 2px solid #ececec;
   display: flex;
   flex-direction: column;
 }
+
+.timeline__day_last,
 .timeline__day_friday {
   border-right: 0;
 }
+
 .timeline__part {
   padding: 1rem;
   flex-grow: 1;
   display: flex;
   justify-content: center;
 }
+
 .timeline__part img {
   max-width: 100%;
   max-height: 100%;
   align-self: center;
 }
+
 .timeline__weekend {
   padding: 0.5rem;
 }

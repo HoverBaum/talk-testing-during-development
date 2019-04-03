@@ -1,3 +1,5 @@
+export { theme } from './lib/theme'
+
 import { Head, Notes } from 'mdx-deck'
 import { Split } from 'mdx-deck/layouts'
 
@@ -94,8 +96,8 @@ import splitTestingData from './scenarios/splitTesting'
 
 | Dev | Test | Meet | Releasing | Releases | Bugs |
 | --- | --- | --- | --- | --- | --- |
-| 11 | 5 | 2 | 1 | 1 | 🐛🐛🐛 | 
-| 14 | 2 | 2 | 2 | 8 | 🐛 | 
+| 11 | 5 | 2 | 1 | **1** | 🐛🐛🐛 | 
+| 14 | 2 | 2 | 2 | **8** | 🐛 | 
 
 ---
 
@@ -105,7 +107,12 @@ IT IS ALL ABOUT CYCLES
 
 ---
 
-## High performing organizations.
+## High performing organizations
+
+- Deploy **200** times as often
+- Have a **3** times lower change failure rate
+
+<small style={{fontSize: '1rem', position: 'absolute', bottom: '1rem'}}>- <a style={{color: 'inherit'}} href="https://puppet.com/system/files/2016-06/2016%20State%20of%20DevOps%20infographic.pdf">DevOps Report 2016</a></small>
 
 ---
 
@@ -127,8 +134,19 @@ import perfectTestingData from './scenarios/perfect'
 
 ---
 
-explain a perfect day
-only automation can get us here
+<Timeline
+  data={[{
+    types: ['development']
+  }, {
+    types: ['testing', 'release']
+  }]}
+/>
+
+<Notes>
+  In a perfect world I focus on coding
+  while testing in release happen automated
+  and in parallel to my work.
+</Notes>
 
 ---
 
