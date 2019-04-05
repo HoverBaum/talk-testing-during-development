@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "mdx-deck index.mdx --port 8282",
-    "build": "rm -rf dist && mdx-deck build index.mdx"
+    "build": "rm -rf dist && mdx-deck build index.mdx && cp -r images dist/images"
   },
   "author": "",
   "license": "ISC",
