@@ -3,23 +3,24 @@ export { theme } from './lib/theme'
 import { Head, Notes } from 'mdx-deck'
 import { Split } from 'mdx-deck/layouts'
 
+import CustomSplit from './lib/split.layout.js'
+
 import Timeline from './components/timeline/timeline'
 import Quote from './components/quote'
 import Wrapper from './components/wrapper'
 
 <Head>
   <title>Testing</title>
+  <base href="/talk-testing-during-development/">
 </Head>
 
 <!-- Presentation start -->
 
 # Testing Webapps 🧐
 
-💪 Getting motivated 💪
-
 ---
 
-export default Split
+export default CustomSplit
 
 ![](images/portrait.jpg)
 
@@ -29,7 +30,7 @@ Developer for fun 🎉
 
 ---
 
-export default Split
+export default CustomSplit
 
 ![](images/testing-detective.png)
 
@@ -111,6 +112,7 @@ IT IS ALL ABOUT CYCLES
 
 - Deploy **200** times as often
 - Have a **3** times lower change failure rate
+- Recover **24** times faster from failures
 
 <small style={{fontSize: '1rem', position: 'absolute', bottom: '1rem'}}>- <a style={{color: 'inherit'}} href="https://puppet.com/system/files/2016-06/2016%20State%20of%20DevOps%20infographic.pdf">DevOps Report 2016</a></small>
 
@@ -133,6 +135,12 @@ import perfectTestingData from './scenarios/perfect'
 </Wrapper>
 
 ---
+
+<h1
+  style={{
+    display: 'flex',
+    justifyContent: 'space-around'
+  }}><span>👷</span><span>🤖</span></h1>
 
 <Timeline
   data={[{
