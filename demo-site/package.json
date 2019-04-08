@@ -1,0 +1,12 @@
+{
+  "name": "demo-site",
+  "scripts": {
+    "start": "live-server --port=8888 --no-browser",
+    "test": "cypress open",
+    "tests:run": "cypress run"
+  },
+  "dependencies": {
+    "cypress": "^3.2.0",
+    "live-server": "^1.2.1"
+  }
+}
