@@ -9,6 +9,7 @@ import Timeline from './components/timeline/timeline'
 import Quote from './components/quote'
 import Wrapper from './components/wrapper'
 import BackgroundImage from './components/background-image'
+import Legend from './components/legend'
 
 <Head>
   <title>Testing</title>
@@ -47,15 +48,23 @@ Timeinvestment
 
 ---
 
-## Legend
+# Legend
 
-![](images/meetings-calendar.png) Meetings
-
-![](images/working-2-construction.png) Work on product
-
-![](images/testing-detective.png) Manual testing
-
-![](images/releasing-rocket.png) Releasing software
+<Legend
+  items={[{
+    src: '/images/meetings-calendar.png',
+    title: 'Meetings'
+  }, {
+    src: '/images/working-2-construction.png',
+    title: 'Work on product' 
+  }, {
+    src: '/images/testing-detective.png',
+    title: 'Manual testing' 
+  }, {
+    src: '/images/releasing-rocket.png',
+    title: 'Releasing software' 
+  }]}
+/>
 
 <Notes>
   Most people meet every two weeks.
