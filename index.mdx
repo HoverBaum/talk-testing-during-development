@@ -203,3 +203,36 @@ import perfectTestingData from './scenarios/perfect'
 ---
 
 <Counter/>
+
+---
+
+## Testcases
+
+1. Basic render
+2. Counter logic
+3. Messsage display
+
+---
+
+### 1. Basic render
+
+```javascript
+it('should have a headline', () => {
+  cy.visit('/')
+  cy.get('h1')
+    .should('exist')
+})
+```
+
+---
+
+### 1. Basic render
+
+```javascript
+it('should have the right headline', () => {
+  cy.visit('/')
+  cy.get('h1')
+    .should('exist')
+    .contains('Testing page')
+})
+```

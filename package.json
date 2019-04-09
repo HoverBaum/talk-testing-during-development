@@ -2,16 +2,14 @@
   "name": "testing",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "start": "mdx-deck index.mdx --port 8282",
     "build": "rm -rf dist && mdx-deck build index.mdx && cp -r images dist/images"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
     "@emotion/core": "^10.0.10",
-    "mdx-deck": "^2.0.6"
+    "mdx-deck": "^2.0.6",
+    "prism-react-renderer": "^0.1.6"
   }
 }
