@@ -13,6 +13,7 @@ import Legend from './components/legend'
 import Center from './components/center'
 import Counter from './components/counter'
 import LargeImage from './components/largeImage'
+import Impact from './components/impact'
 
 <Head>
   <title>Testing</title>
@@ -114,13 +115,15 @@ import splitTestingData from './scenarios/splitTesting'
 
 ---
 
-<BackgroundImage src="images/cycle.jpg" />
+<BackgroundImage
+  src="images/cycle.jpg"
+  credit="Photo by Jeff Fielitz on Unsplash"
+  creditLink="https://unsplash.com/photos/60WxQTZ8iq8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+/>
 
 <Quote
   size="3"
   onImage
-  credit="Photo by Jeff Fielitz on Unsplash"
-  creditLink="https://unsplash.com/photos/60WxQTZ8iq8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 >
   IT IS ALL ABOUT CYCLES
 </Quote>
@@ -186,13 +189,15 @@ import perfectTestingData from './scenarios/perfect'
 
 ---
 
-<BackgroundImage src="images/tools.jpg" />
+<BackgroundImage
+  src="images/tools.jpg"
+  credit="Photo by Cesar Carlevarino Aragon on Unsplash"
+  creditLink="https://unsplash.com/photos/NL_DF0Klepc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+/>
 
 <Quote
   size="3"
   onImage
-  credit="Photo by Cesar Carlevarino Aragon on Unsplash"
-  creditLink="https://unsplash.com/photos/NL_DF0Klepc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
 >
   Use the right tool for the right job
 </Quote>
@@ -209,7 +214,7 @@ import perfectTestingData from './scenarios/perfect'
 
 ## Testcases
 
-1. Basic render 🤪
+1. Basic render 🎉
 2. Counter logic 🤓
 3. Messsage display 📜
 
@@ -230,6 +235,8 @@ Life demo time.
 ```javascript
 // Basic file structure some.spec.js.
 
+/// <reference types="Cypress" />
+
 context('Some component', () => {
 
   it('should do something', () => {
@@ -241,7 +248,7 @@ context('Some component', () => {
 
 ---
 
-### 1. Basic render 🤪
+### 1. Basic render 🎉
 
 ```javascript
 it('should have a headline', () => {
@@ -253,7 +260,7 @@ it('should have a headline', () => {
 
 ---
 
-### 1. Basic render 🤪
+### 1. Basic render 🎉
 
 ```javascript
 it('should have the right headline', () => {
@@ -314,11 +321,24 @@ it('should display message on click', () => {
 
 ---
 
+<BackgroundImage
+  src="images/earth.jpg"
+  credit="Photo by NASA on Unsplash"
+  creditLink="https://unsplash.com/photos/Q1p7bh3SHj8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+/>
+
+<Impact onImage={true}>
+  Beyond the basics
+</Impact>
+
+---
+
 ## Gotchas und Tipps
 
 - it.only
 - mock data from backend
 - login programmatically
+- fixtures
 
 ---
 
