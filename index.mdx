@@ -12,6 +12,7 @@ import BackgroundImage from './components/background-image'
 import Legend from './components/legend'
 import Center from './components/center'
 import Counter from './components/counter'
+import LargeImage from './components/largeImage'
 
 <Head>
   <title>Testing</title>
@@ -208,13 +209,36 @@ import perfectTestingData from './scenarios/perfect'
 
 ## Testcases
 
-1. Basic render
-2. Counter logic
-3. Messsage display
+1. Basic render 🤪
+2. Counter logic 🤓
+3. Messsage display 📜
 
 ---
 
-### 1. Basic render
+<LargeImage
+  src="images/cypress-example.png"
+/>
+
+
+---
+
+### Cypress setup
+
+```javascript
+// Basic file structure some.spec.js.
+
+context('Some component', () => {
+
+  it('should do something', () => {
+    cy.doThings().assert('to.be', true)
+  })
+
+})
+```
+
+---
+
+### 1. Basic render 🤪
 
 ```javascript
 it('should have a headline', () => {
@@ -226,7 +250,7 @@ it('should have a headline', () => {
 
 ---
 
-### 1. Basic render
+### 1. Basic render 🤪
 
 ```javascript
 it('should have the right headline', () => {
@@ -234,5 +258,53 @@ it('should have the right headline', () => {
   cy.get('h1')
     .should('exist')
     .contains('Testing page')
+})
+```
+
+---
+
+### 2. Counter logic 🤓
+
+```javascript
+it('should initially have a count of 0', () => {
+  cy.visit('/')
+  cy.get('[data-test="count-output"]').contains('0')
+})
+```
+
+---
+
+### 2. Counter logic 🤓
+
+```javascript
+it('should increment', () => {
+  cy.visit('/')
+  cy.get('[data-test="button-increment"]').click()
+  cy.get('[data-test="count-output"]').contains('1')
+})
+```
+
+---
+
+### 2. Counter logic 🤓
+
+```javascript
+it('should increment multiple times', () => {
+  cy.visit('/')
+  cy.get('[data-test="button-increment"]').click()
+  cy.get('[data-test="button-increment"]').click()
+  cy.get('[data-test="count-output"]').contains('2')
+})
+```
+
+---
+
+### 3. Messsage display 📜
+
+```javascript
+it('should display message on click', () => {
+  cy.visit('/')
+  cy.get('[data-test="button-display"]').click()
+  cy.get('[data-test=display]').should('exist')
 })
 ```
