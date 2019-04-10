@@ -1,4 +1,7 @@
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import React from 'react'
+import './counter.css'
 
 class Counter extends React.Component {
 
@@ -18,20 +21,32 @@ class Counter extends React.Component {
   render() {
     const {count, displayMessage} = this.state
     return (
-      <div>
-        <h1>Testing Page</h1>
+      <div
+        css={css`
+          box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+          border-radius: 0.5rem;
+        `}
+      >
+        <div className="website__header">
+          <div className="website__header__circle"></div>
+          <div className="website__header__circle"></div>
+          <div className="website__header__circle"></div>
+        </div>
+        <div css={css`padding: 2rem;`}>
+          <h1 css={{marginTop: 0}}>Testing Page</h1>
 
-        <button style={{fontSize: '2rem'}} onClick={this.onIncrement}>Increment</button>
+          <button style={{fontSize: '2rem'}} onClick={this.onIncrement}>Increment</button>
 
-        <p>Current count: {count}</p>        
+          <p>Current count: {count}</p>        
 
-        <button style={{fontSize: '2rem'}} onClick={this.onDisplayMessage}>Display Message</button>
+          <button style={{fontSize: '2rem'}} onClick={this.onDisplayMessage}>Display Message</button>
 
-        {displayMessage ? (
-          <div>
-            A message here
-          </div>
-        ) : <div style={{height: '1.2em'}}></div>}
+          {displayMessage ? (
+            <div>
+              A message here
+            </div>
+          ) : <div style={{height: '1.2em'}}></div>}
+        </div>
       </div>
     )    
   }
