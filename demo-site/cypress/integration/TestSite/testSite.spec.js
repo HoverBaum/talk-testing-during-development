@@ -5,13 +5,11 @@ context('Test site', () => {
   it('should have a headline', () => {
     cy.visit('/')
     cy.get('h1')
-      .should('exist')
   })
 
   it('should have the right headline', () => {
     cy.visit('/')
     cy.get('h1')
-      .should('exist')
       .contains('Testing page')
   })
 
@@ -36,7 +34,7 @@ context('Test site', () => {
   it('should display message on click', () => {
     cy.visit('/')
     cy.get('[data-test="button-display"]').click()
-    cy.get('[data-test=display]').should('exist')
+    cy.get('[data-test=display]')
   })
 
 })
