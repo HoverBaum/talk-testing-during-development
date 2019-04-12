@@ -331,18 +331,111 @@ it('should display message on click', () => {
 
 ---
 
-# What to run
+## What to run
 
-Cypress is build on Mocha 
+Cypress provides ways to decide, which tests to run.
+
+```javascript
+it.only('should only run this', () => {})
+
+it.skip('should skip this', () => {})
+```
 
 ---
 
-## Gotchas und Tipps
+## Using previous state
 
-- it.only
-- mock data from backend
-- login programmatically
-- fixtures
+```javascript
+it('should increment from previous value', () => {
+  cy.visit('/')
+  cy.get('[data-test="count-output"]')
+    .invoke('text').then(text => {
+      cy.get('[data-test="button-increment"]').click()
+      cy.get('[data-test="count-output"]')
+        .contains(parseInt(text) + 1)
+    })
+})
+```
+
+---
+
+## Cypress yields
+
+Cypress yields values in a Promise like fashion.
+
+You can **not** `await` Cypress commands
+
+Thus we need to chain `.then()` should we<br/>want to use values from previous commands.
+
+---
+
+## Fixtures
+
+```javascript
+it('should compare to fixture', () => {
+  cy.visit('/')
+  cy.fixture('data').then(dataFixture => {
+    cy.get('.data-element')
+      .contains(dataFixture)
+  })
+})
+```
+
+<Notes>
+  Fixtures are pre-defined datasets.
+</Notes>
+
+---
+
+## Mocks and fixtures
+
+```javascript
+it('should mock requests', () => {
+  cy.server()
+  cy.route(/some\/regex/, 'fixture:response.json')
+    .as('getData')
+  cy.visit('/loads/data')
+  cy.get('[data-testid="data"]')
+})
+```
+
+---
+
+## Aliases
+
+```javascript
+before(() => {
+  cy.fixture('data').as('dataFixture')
+})
+
+it('should ...', function() {
+  cy.get('element').contains(this.dataFixture)
+})
+```
+
+<Notes>
+  Aliases need the function keyword.
+</Notes>
+
+---
+
+## Best Practices
+
+Speed up your tests by logging in programmatically.
+
+Make direct requests to your server to set cookies.
+
+Expose APIs from your application.
+
+[More best practices](https://docs.cypress.io/guides/references/best-practices.html)
+
+---
+
+## Resources
+
+- [Cypress Guides](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
+- [Cypress API](https://docs.cypress.io/api/api/table-of-contents.html)
+- [Examples](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples)
 
 ---
 

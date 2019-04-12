@@ -31,10 +31,34 @@ context('Test site', () => {
     cy.get('[data-test="count-output"]').contains('2')
   })
 
+  it('should increment from previous value', () => {
+    cy.visit('/')
+    cy.get('[data-test="count-output"]').invoke('text').then(text => {
+      cy.get('[data-test="button-increment"]').click()
+      cy.get('[data-test="count-output"]').contains(parseInt(text) + 1)
+    })
+  })
+
+  it('should compare to fixture', () => {
+    cy.visit('/')
+    cy.fixture('data').then(dataFixture => {
+      cy.get('[data-test="count-output"]')
+        .contains(dataFixture)
+    })    
+  })
+
   it('should display message on click', () => {
     cy.visit('/')
     cy.get('[data-test="button-display"]').click()
     cy.get('[data-test=display]')
+  })
+
+  it('should mock requests', () => {
+    cy.server()
+    cy.route(/data\/response/, 'fixture:response.json')
+      .as('getData')
+    cy.visit('/data-loading.html')
+    cy.get('[data-testid="data"]')
   })
 
 })

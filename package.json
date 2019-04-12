@@ -4,11 +4,13 @@
   "description": "",
   "scripts": {
     "start": "mdx-deck index.mdx --port 8282",
-    "build": "rm -rf dist && mdx-deck build index.mdx && cp -r images dist/images"
+    "build": "rm -rf dist && mdx-deck build index.mdx && cp -r images dist/images",
+    "export": "mdx-deck-export pdf index.mdx"
   },
   "author": "",
   "devDependencies": {
     "@emotion/core": "^10.0.10",
+    "@hoverbaum/slides-to-pdf": "^0.4.0",
     "mdx-deck": "^2.0.6",
     "prism-react-renderer": "^0.1.6"
   }
