@@ -22,13 +22,22 @@ export const BackgroundImage = ({items}) => (
           margin-top: 1em;
         `}
       >
-        <img src={item.src}
+        {item.src ? <img src={item.src}
           css={css`
             height: 3em;
             margin: 0 auto;
             display: block;
           `}
-        />
+        /> : ''}
+        {item.emoji ? <span
+          css={css`
+            text-align: center;
+            display: block;
+            font-size: 7rem;
+          `}
+        >
+          {item.emoji}
+        </span> : ''}
         <span
           css={css`
             display: block;

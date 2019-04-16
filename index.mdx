@@ -52,7 +52,7 @@ Timeinvestment
 
 ---
 
-# Legend
+## Legend
 
 <Legend
   items={[{
@@ -140,18 +140,18 @@ import splitTestingData from './scenarios/splitTesting'
 
 ---
 
+## Legend (continued)
 
-## Perfect day
-
-<Center>
-
-![](images/perfect-day.png)
-
-</Center>
+<Legend
+  items={[{
+    src: '/images/perfect-day.png',
+    title: 'Perfect day'
+  }]}
+/>
 
 ---
 
-## My dream 🤩
+## My dream 👨‍💻
 
 import perfectTestingData from './scenarios/perfect'
 
@@ -163,17 +163,36 @@ import perfectTestingData from './scenarios/perfect'
 
 ---
 
+## Actors
+
+<Legend
+  items={[{
+    emoji: '👨‍💻',
+    title: 'Developer' 
+  }, {
+    emoji: '🧐',
+    title: 'Tester' 
+  }, {
+    emoji: '🤖',
+    title: 'Computer' 
+  }]}
+/>
+
+---
+
 <h1
   style={{
     display: 'flex',
     justifyContent: 'space-around'
-  }}><span>🤩</span><span>🤖</span></h1>
+  }}><span>👨‍💻</span><span>🤖</span><span>🧐</span></h1>
 
 <Timeline
   data={[{
     types: ['development']
   }, {
     types: ['testing', 'release']
+  }, {
+    types: ['testing']
   }]}
 />
 
