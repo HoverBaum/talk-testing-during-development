@@ -419,6 +419,41 @@ it('should ...', function() {
 
 ---
 
+## Do it programmatically
+
+```javascript
+cy.request({
+  method: 'POST',
+  url: 'https://your.domain',
+  body: {
+    password,
+    username
+  }
+}).then(response => {
+  expect(response.isOkStatusCode).to.be.true
+  const id = response.body.id
+  window.localStorage.setItem('id', id)
+  // Cookies are set by Cypress
+})
+```
+
+---
+
+## Custom Commands
+
+```javascript
+Cypress.Commands.add('login', (username, password) => {
+  // Login programmatically
+})
+
+// some.spec.js
+beforeEach(() => {
+  cy.login('username', 'password')
+})
+```
+
+---
+
 ## Best Practices
 
 Speed up your tests by logging in programmatically.
@@ -426,6 +461,8 @@ Speed up your tests by logging in programmatically.
 Make direct requests to your server to set cookies.
 
 Expose APIs from your application.
+
+`.get()` does not need positive assertions.
 
 [More best practices](https://docs.cypress.io/guides/references/best-practices.html)
 
