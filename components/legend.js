@@ -11,6 +11,7 @@ export const BackgroundImage = ({items}) => (
       display: flex;
       flex-direction: row;
       max-width: 80vw;
+      min-width: 50vw;
       flex-wrap: wrap;
       justify-content: space-between;
     `}
