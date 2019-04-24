@@ -2,3 +2,42 @@
 
 ## The why and how
 
+In this talk we explore some experiences on how a high level of automation in testing can benefit the development workflow and look at how to use Cypress to automate end-to-end tests of websites.
+
+You can check out the hosted version of the slides at: https://testing-during-development.netlify.com/
+
+## This deck
+
+This deck is based on [mdx-deck](https://github.com/jxnblk/mdx-deck) and you can find the slides in `index.mdx`.
+
+Around that we use custom themes and a couple of components.
+
+This project provides a few commands:
+
+```bash
+# Run presentation locally
+npm start
+
+# Create standalone HTML version
+npm run build
+
+# Generate a PDF version
+npm run export
+```
+
+For exporting the presentation to PDF we use [slides-to-pdf](https://github.com/HoverBaum/slides-to-pdf).
+
+### Demo sites
+
+In `demo-site` you can find a simple website that illustrates all the implementation details for Cypress mentioned in the slies.
+
+To run the site locally and open Cypress to test it, simply run:
+
+```bash
+cd demo-site
+npm i
+npm start
+
+# In a second shell in the demo-site folder
+npm test
+```

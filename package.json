@@ -5,7 +5,7 @@
   "scripts": {
     "start": "mdx-deck index.mdx --port 8282",
     "build": "rm -rf dist && mdx-deck build index.mdx && cp -r images dist/images",
-    "export": "mdx-deck-export pdf index.mdx"
+    "export": "slides-to-pdf http://localhost:8282"
   },
   "author": "",
   "devDependencies": {
