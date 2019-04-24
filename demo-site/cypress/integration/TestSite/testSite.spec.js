@@ -15,42 +15,42 @@ context('Test site', () => {
 
   it('should initially have a count of 0 (zero)', () => {
     cy.visit('/')
-    cy.get('[data-test="count-output"]').contains('0')
+    cy.get('[data-testid="count-output"]').contains('0')
   })
 
   it('should increment when clicking increment button', () => {
     cy.visit('/')
-    cy.get('[data-test="button-increment"]').click()
-    cy.get('[data-test="count-output"]').contains('1')
+    cy.get('[data-testid="button-increment"]').click()
+    cy.get('[data-testid="count-output"]').contains('1')
   })
 
   it('should increment multiple times', () => {
     cy.visit('/')
-    cy.get('[data-test="button-increment"]').click()
-    cy.get('[data-test="button-increment"]').click()
-    cy.get('[data-test="count-output"]').contains('2')
+    cy.get('[data-testid="button-increment"]').click()
+    cy.get('[data-testid="button-increment"]').click()
+    cy.get('[data-testid="count-output"]').contains('2')
   })
 
   it('should increment from previous value', () => {
     cy.visit('/')
-    cy.get('[data-test="count-output"]').invoke('text').then(text => {
-      cy.get('[data-test="button-increment"]').click()
-      cy.get('[data-test="count-output"]').contains(parseInt(text) + 1)
+    cy.get('[data-testid="count-output"]').invoke('text').then(text => {
+      cy.get('[data-testid="button-increment"]').click()
+      cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
     })
   })
 
   it('should compare to fixture', () => {
     cy.visit('/')
     cy.fixture('data').then(dataFixture => {
-      cy.get('[data-test="count-output"]')
+      cy.get('[data-testid="count-output"]')
         .contains(dataFixture)
     })    
   })
 
   it('should display message on click', () => {
     cy.visit('/')
-    cy.get('[data-test="button-display"]').click()
-    cy.get('[data-test=display]')
+    cy.get('[data-testid="button-display"]').click()
+    cy.get('[data-testid=display]')
   })
 
   it('should mock requests', () => {

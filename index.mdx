@@ -14,6 +14,7 @@ import Center from './components/center'
 import Counter from './components/counter'
 import LargeImage from './components/largeImage'
 import Impact from './components/impact'
+import Credit from './components/credit'
 
 <Head>
   <title>Testing</title>
@@ -43,11 +44,28 @@ export default CustomSplit
 
 - Find bugs before users do
 - Ensure we fulfil specification
+- Help future developers
 
 Timeinvestment
 
 <Notes>
   Examples to show why how we test is important
+</Notes>
+
+---
+
+<BackgroundImage
+  src="images/reading.jpg"
+  credit="Photo by Picsea on Unsplash"
+  creditLink="https://unsplash.com/photos/EQlTyDZRx7U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+/>
+
+<Impact onImage={true}>
+  Story time
+</Impact>
+
+<Notes>
+  I love to talk about personal experiences to convey motivation.
 </Notes>
 
 ---
@@ -72,7 +90,8 @@ Timeinvestment
 
 <Notes>
   Most people meet every two weeks.
-  Because "scrum" or "agile".
+  Because "scrum" or "agile".<br/>
+  These are the processes / actions we will see.
 </Notes>
 
 ---
@@ -89,7 +108,7 @@ import longTestingData from './scenarios/longTesting'
 
 ---
 
-## More Releases
+## Manual Releases
 
 import splitTestingData from './scenarios/splitTesting'
 
@@ -106,12 +125,20 @@ import splitTestingData from './scenarios/splitTesting'
 | 11 | 5 | 2 | 1 | 1 |
 | 14 | 2 | 2 | 2 | 8 |
 
+<Credit
+  credit="Timeinvestment in days"
+/>
+
 ---
 
 | Dev | Test | Meet | Releasing | Releases | Bugs |
 | --- | --- | --- | --- | --- | --- |
-| 11 | 5 | 2 | 1 | **1** | 🐛🐛🐛 | 
-| 14 | 2 | 2 | 2 | **8** | 🐛 | 
+| 11 | 5 | 2 | 1 | **1** | 🐛🐛🐛🐛🐛 | 
+| 14 | 2 | 2 | 2 | **8** | 🐛🐛| 
+
+<Credit
+  credit="Timeinvestment in days"
+/>
 
 ---
 
@@ -138,6 +165,10 @@ import splitTestingData from './scenarios/splitTesting'
 
 <small style={{fontSize: '1rem', position: 'absolute', bottom: '1rem'}}>- <a style={{color: 'inherit'}} href="https://puppet.com/system/files/2016-06/2016%20State%20of%20DevOps%20infographic.pdf">DevOps Report 2016</a></small>
 
+<Notes>
+  Every good talk should backup their claims with some empirical evidence.
+</Notes>
+
 ---
 
 ## Legend
@@ -163,6 +194,22 @@ import perfectTestingData from './scenarios/perfect'
 
 ---
 
+| Dev | Test | Meet | Releasing | Releases | Bugs |
+| --- | --- | --- | --- | --- | --- |
+| 11 | 5 | 2 | 1 | 1 | 🐛🐛🐛🐛🐛 | 
+| 14 | 2 | 2 | 2 | 8 | 🐛🐛| 
+| 18 | 0 | 2 | 0 | 200 | 🐛| 
+
+<Credit
+  credit="Timeinvestment in days"
+/>
+
+<Notes>
+  10 Releases per day. I think even less than a thrid of bugs.
+</Notes>
+
+---
+
 ## Actors
 
 <Legend
@@ -171,7 +218,7 @@ import perfectTestingData from './scenarios/perfect'
     title: 'Developer' 
   }, {
     emoji: '🧐',
-    title: 'Tester' 
+    title: 'Tester / QA' 
   }, {
     emoji: '🤖',
     title: 'Computer' 
@@ -198,8 +245,9 @@ import perfectTestingData from './scenarios/perfect'
 
 <Notes>
   In a perfect world I focus on coding
-  while testing in release happen automated
-  and in parallel to my work.
+  while testing and release happen automated
+  and in parallel to my work.<br/>
+  Meanwhile QA ensures quality.
 </Notes>
 
 ---
@@ -225,6 +273,12 @@ import perfectTestingData from './scenarios/perfect'
 
 ![Cypress logo](images/cypress-logo.png)
 
+<Center>
+
+e2e and integration testing
+
+</Center>
+
 ---
 
 <Counter/>
@@ -234,7 +288,7 @@ import perfectTestingData from './scenarios/perfect'
 ## Testcases
 
 1. Basic render 🎉
-2. Counter logic 🤓
+2. Counter logic 🧮
 3. Messsage display 📜
 
 ---
@@ -276,6 +330,10 @@ it('should have a headline', () => {
 })
 ```
 
+<Notes>
+  Can get elements and assert their presence.
+</Notes>
+
 ---
 
 ### 1. Basic render 🎉
@@ -288,41 +346,58 @@ it('should have the right headline', () => {
 })
 ```
 
+<Notes>
+  We can find text within an element.
+</Notes>
+
 ---
 
-### 2. Counter logic 🤓
+### 2. Counter logic 🧮
 
 ```javascript
 it('should initially have a count of 0', () => {
   cy.visit('/')
-  cy.get('[data-test="count-output"]').contains('0')
+  cy.get('[data-testid="count-output"]').contains('0')
 })
 ```
 
+<Notes>
+  Use data-testid to decouple tests from every day development.
+</Notes>
+
 ---
 
-### 2. Counter logic 🤓
+### 2. Counter logic 🧮
 
 ```javascript
 it('should increment', () => {
   cy.visit('/')
-  cy.get('[data-test="button-increment"]').click()
-  cy.get('[data-test="count-output"]').contains('1')
+  cy.get('[data-testid="button-increment"]').click()
+  cy.get('[data-testid="count-output"]').contains('1')
 })
 ```
 
+<Notes>
+  We can interact with elements.<br/>
+  click, type, select, check
+</Notes>
+
 ---
 
-### 2. Counter logic 🤓
+### 2. Counter logic 🧮
 
 ```javascript
 it('should increment multiple times', () => {
   cy.visit('/')
-  cy.get('[data-test="button-increment"]').click()
-  cy.get('[data-test="button-increment"]').click()
-  cy.get('[data-test="count-output"]').contains('2')
+  cy.get('[data-testid="button-increment"]').click()
+  cy.get('[data-testid="button-increment"]').click()
+  cy.get('[data-testid="count-output"]').contains('2')
 })
 ```
+
+<Notes>
+  Good tests check multiple / all cases.
+</Notes>
 
 ---
 
@@ -331,10 +406,14 @@ it('should increment multiple times', () => {
 ```javascript
 it('should display message on click', () => {
   cy.visit('/')
-  cy.get('[data-test="button-display"]').click()
-  cy.get('[data-test=display]')
+  cy.get('[data-testid="button-display"]').click()
+  cy.get('[data-testid=display]')
 })
 ```
+
+<Notes>
+  Can get() dynamically added elements. Cypress will retry this for you.
+</Notes>
 
 ---
 
@@ -367,10 +446,10 @@ it.skip('should skip this', () => {})
 ```javascript
 it('should increment from previous value', () => {
   cy.visit('/')
-  cy.get('[data-test="count-output"]')
+  cy.get('[data-testid="count-output"]')
     .invoke('text').then(text => {
-      cy.get('[data-test="button-increment"]').click()
-      cy.get('[data-test="count-output"]')
+      cy.get('[data-testid="button-increment"]').click()
+      cy.get('[data-testid="count-output"]')
         .contains(parseInt(text) + 1)
     })
 })
@@ -475,13 +554,13 @@ beforeEach(() => {
 
 ## Best Practices
 
-Speed up your tests by logging in programmatically.
-
-Make direct requests to your server to set cookies.
+Consider what to e2e-test.
 
 Expose APIs from your application.
 
 `.get()` does not need positive assertions.
+
+Speed up your tests by logging in programmatically.
 
 [More best practices](https://docs.cypress.io/guides/references/best-practices.html)
 
