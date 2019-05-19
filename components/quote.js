@@ -7,8 +7,8 @@ const quoteStyle = {
   fontSize: '1.2em'
 }
 
-const Quote = ({children, size = 1, onImage }) => (
-  <div 
+const Quote = ({ children, size = 1, onImage }) => (
+  <div
     css={css`
       font-size: ${size}em;
       font-style: italic;
@@ -21,7 +21,7 @@ const Quote = ({children, size = 1, onImage }) => (
     `}
   >
     <span style={quoteStyle}>“</span>
-      {children}
+    {children}
     <span style={quoteStyle}>„</span>
   </div>
 )
