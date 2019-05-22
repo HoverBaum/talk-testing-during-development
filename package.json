@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "mdx-deck index.mdx --port 8282",
-    "build": "rm -rf dist && mdx-deck build index.mdx && cp -r images dist/images",
+    "start": "mdx-deck index.js --port 8282",
+    "build": "rm -rf dist && mdx-deck build index.js && cp -r images dist/images",
     "export": "slides-to-pdf http://localhost:8282"
   },
   "author": "",
