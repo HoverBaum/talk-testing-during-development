@@ -11,17 +11,19 @@ const SlideHeadline = ({ children, sectionTitle }) => (
       width: '80vw',
       fontWeight: 300,
       marginTop: '0.25em',
-      color: '#334a5e',
+      color: '#334a5e'
     }}
   >
     {sectionTitle && (
       <>
-      <span
-        css={{
-          color: '#cc4a1a'
-        }}
-      >{sectionTitle}</span>
-      {children && <span> - </span>}
+        <span
+          css={{
+            color: '#cc4a1a'
+          }}
+        >
+          {sectionTitle}
+        </span>
+        {children && <span> - </span>}
       </>
     )}
     {children}

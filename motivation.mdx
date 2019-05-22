@@ -1,21 +1,22 @@
-import { Head, Notes } from "mdx-deck";
-import { Split } from "mdx-deck/layouts";
+import { Head, Notes } from 'mdx-deck'
+import { Split } from 'mdx-deck/layouts'
 
-import CustomSplit from "./lib/split.layout.js";
-import Central from "./lib/central.layout.js";
+import CustomSplit from './lib/split.layout.js'
+import Central from './lib/central.layout.js'
 
-import Timeline from "./components/timeline/timeline";
-import Quote from "./components/quote";
-import BackgroundImage from "./components/background-image";
-import Legend from "./components/legend";
-import Center from "./components/center";
-import Counter from "./components/counter";
-import LargeImage from "./components/largeImage";
-import Impact from "./components/impact";
-import Credit from "./components/credit";
-import SlideHeadline from "./components/slide-headline";
-import Portrait from "./components/portrait";
-import OpeningSlide from "./components/opening-slide";
+import Timeline from './components/timeline/timeline'
+import Quote from './components/quote'
+import BackgroundImage from './components/background-image'
+import Legend from './components/legend'
+import Center from './components/center'
+import Counter from './components/counter'
+import LargeImage from './components/largeImage'
+import Impact from './components/impact'
+import Credit from './components/credit'
+import SlideHeadline from './components/slide-headline'
+import Portrait from './components/portrait'
+import OpeningSlide from './components/opening-slide'
+import Interlude from './components/interlude'
 
 <Head>
   <title>Testing</title>
@@ -23,20 +24,20 @@ import OpeningSlide from "./components/opening-slide";
 
 <!-- Presentation start -->
 
-export default Central;
+export default Central
 
 <OpeningSlide
   title="Web Apps don't need no manual testing 🧐"
-  author="Hendrik Wallbaum"
+  author='Hendrik Wallbaum'
 />
 
 ---
 
-export default CustomSplit;
+export default CustomSplit
 
 <Center>
 
-<Portrait src="images/portrait.jpg" />
+<Portrait src='images/portrait.jpg' />
 
 </Center>
 
@@ -47,9 +48,9 @@ Developer for fun 🎉
 ---
 
 <BackgroundImage
-  src="images/journey.jpg"
-  credit="Photo by Austin Ban on Unsplash"
-  creditLink="https://unsplash.com/photos/gb5VDzCIVbA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  src='images/journey.jpg'
+  credit='Photo by Austin Ban on Unsplash'
+  creditLink='https://unsplash.com/photos/gb5VDzCIVbA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
 />
 
 <Impact onImage={true}>
@@ -58,7 +59,7 @@ Developer for fun 🎉
 
 ---
 
-<SlideHeadline sectionTitle="Testing">Why we do it</SlideHeadline>
+<SlideHeadline sectionTitle='Testing'>Why we do it</SlideHeadline>
 
 <CustomSplit>
 
@@ -82,37 +83,31 @@ Developer for fun 🎉
 
 ---
 
-<BackgroundImage
-  src="images/reading.jpg"
-  credit="Photo by Picsea on Unsplash"
-  creditLink="https://unsplash.com/photos/EQlTyDZRx7U?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-/>
-
-<Impact onImage={true}>Story time</Impact>
+<Interlude text='📖 Story time' />
 
 <Notes>I love to talk about personal experiences to convey motivation.</Notes>
 
 ---
 
-<SlideHeadline sectionTitle="Story time">Development tasks</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>Development tasks</SlideHeadline>
 
 <Legend
   items={[
     {
-      src: "/images/meetings-calendar.png",
-      title: "Meetings"
+      src: '/images/meetings-calendar.png',
+      title: 'Meetings'
     },
     {
-      src: "/images/working-2-construction.png",
-      title: "Work on product"
+      src: '/images/working-2-construction.png',
+      title: 'Work on product'
     },
     {
-      src: "/images/testing-detective.png",
-      title: "Manual testing"
+      src: '/images/testing-detective.png',
+      title: 'Manual testing'
     },
     {
-      src: "/images/releasing-rocket.png",
-      title: "Releasing software"
+      src: '/images/releasing-rocket.png',
+      title: 'Releasing software'
     }
   ]}
 />
@@ -125,45 +120,45 @@ Developer for fun 🎉
 
 ---
 
-<SlideHeadline sectionTitle="Story time">Codefreeze</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>Codefreeze</SlideHeadline>
 
-import longTestingData from "./scenarios/longTesting";
+import longTestingData from './scenarios/longTesting'
 
 <Timeline data={longTestingData} />
 
 ---
 
-<SlideHeadline sectionTitle="Story time">Manual Releases</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>Manual Releases</SlideHeadline>
 
-import splitTestingData from "./scenarios/splitTesting";
+import splitTestingData from './scenarios/splitTesting'
 
 <Timeline data={splitTestingData} />
 
 ---
 
-<SlideHeadline sectionTitle="Story time">Time investment</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>Time investment</SlideHeadline>
 
 | Dev | Test | Meet | Releasing | Releases |
 | --- | ---- | ---- | --------- | -------- |
 | 11  | 5    | 2    | 1         | 1        |
 | 14  | 2    | 2    | 2         | 8        |
 
-<Credit credit="Timeinvestment in days" />
+<Credit credit='Timeinvestment in days' />
 
 ---
 
-<SlideHeadline sectionTitle="Story time">Time investment</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>Time investment</SlideHeadline>
 
 | Dev | Test | Meet | Releasing | Releases | Bugs       |
 | --- | ---- | ---- | --------- | -------- | ---------- |
 | 11  | 5    | 2    | 1         | **1**    | 🐛🐛🐛🐛🐛 |
 | 14  | 2    | 2    | 2         | **8**    | 🐛🐛       |
 
-<Credit credit="Timeinvestment in days" />
+<Credit credit='Timeinvestment in days' />
 
 ---
 
-<SlideHeadline sectionTitle="Story time">Numbers</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>Numbers</SlideHeadline>
 
 ## High performing organizations
 
@@ -171,11 +166,11 @@ import splitTestingData from "./scenarios/splitTesting";
 - Have a **3** times lower change failure rate
 - Recover **24** times faster from failures
 
-<small style={{ fontSize: "1rem", position: "absolute", bottom: "1rem" }}>
-  -{" "}
+<small style={{ fontSize: '1rem', position: 'absolute', bottom: '1rem' }}>
+  -{' '}
   <a
-    style={{ color: "inherit" }}
-    href="https://puppet.com/system/files/2016-06/2016%20State%20of%20DevOps%20infographic.pdf"
+    style={{ color: 'inherit' }}
+    href='https://puppet.com/system/files/2016-06/2016%20State%20of%20DevOps%20infographic.pdf'
   >
     DevOps Report 2016
   </a>
@@ -188,26 +183,26 @@ import splitTestingData from "./scenarios/splitTesting";
 ---
 
 <BackgroundImage
-  src="images/cycle.jpg"
-  credit="Photo by Jeff Fielitz on Unsplash"
-  creditLink="https://unsplash.com/photos/60WxQTZ8iq8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+  src='images/cycle.jpg'
+  credit='Photo by Jeff Fielitz on Unsplash'
+  creditLink='https://unsplash.com/photos/60WxQTZ8iq8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'
 />
 
-<Quote size="3" onImage>
+<Quote size='3' onImage>
   IT IS ALL ABOUT CYCLES
 </Quote>
 
 ---
 
-<SlideHeadline sectionTitle="My dream" />
+<SlideHeadline sectionTitle='My dream' />
 
-import perfectTestingData from "./scenarios/perfect";
+import perfectTestingData from './scenarios/perfect'
 
 <Timeline data={perfectTestingData} />
 
 ---
 
-<SlideHeadline sectionTitle="My dream">New stats</SlideHeadline>
+<SlideHeadline sectionTitle='My dream'>New stats</SlideHeadline>
 
 | Dev | Test | Meet | Releasing | Releases | Bugs       |
 | --- | ---- | ---- | --------- | -------- | ---------- |
@@ -215,34 +210,34 @@ import perfectTestingData from "./scenarios/perfect";
 | 14  | 2    | 2    | 2         | 8        | 🐛🐛       |
 | 18  | 0    | 2    | 0         | 200      | 🐛         |
 
-<Credit credit="Timeinvestment in days" />
+<Credit credit='Timeinvestment in days' />
 
 <Notes>10 Releases per day. I think even less than a thrid of bugs.</Notes>
 
 ---
 
-<SlideHeadline sectionTitle="My dream">Required actors</SlideHeadline>
+<SlideHeadline sectionTitle='My dream'>Required actors</SlideHeadline>
 
 <Legend
   items={[
     {
-      emoji: "👨‍💻",
-      title: "Developer"
+      emoji: '👨‍💻',
+      title: 'Developer'
     },
     {
-      emoji: "🧐",
-      title: "Tester / QA"
+      emoji: '🧐',
+      title: 'Tester / QA'
     },
     {
-      emoji: "🤖",
-      title: "Computer"
+      emoji: '🤖',
+      title: 'Computer'
     }
   ]}
 />
 
 ---
 
-<SlideHeadline sectionTitle="My dream">The perfect day</SlideHeadline>
+<SlideHeadline sectionTitle='My dream'>The perfect day</SlideHeadline>
 
 <h1
 style={{
@@ -253,13 +248,13 @@ style={{
 <Timeline
   data={[
     {
-      types: ["development"]
+      types: ['development']
     },
     {
-      types: ["testing", "release"]
+      types: ['testing', 'release']
     },
     {
-      types: ["testing"]
+      types: ['testing']
     }
   ]}
 />

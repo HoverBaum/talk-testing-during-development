@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 /** @jsx jsx */
-import { css, jsx } from '@emotion/core';
+import { css, jsx } from '@emotion/core'
 
 const OpeningSlide = ({ title, author }) => (
   <hgroup
@@ -33,6 +33,6 @@ const OpeningSlide = ({ title, author }) => (
       </a>
     )}
   </hgroup>
-);
+)
 
-export default OpeningSlide;
+export default OpeningSlide

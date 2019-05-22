@@ -15,30 +15,15 @@ import Impact from './components/impact'
 import Credit from './components/credit'
 import SlideHeadline from './components/slide-headline'
 import Portrait from './components/portrait'
+import Interlude from './components/interlude'
 
-
-
-<BackgroundImage
-  src="images/tools.jpg"
-  credit="Photo by Cesar Carlevarino Aragon on Unsplash"
-  creditLink="https://unsplash.com/photos/NL_DF0Klepc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-/>
-
-<Quote
-  size="3"
-  onImage
->
-  Use the right tool for the right job
-</Quote>
+<Interlude text='🔧 Use the right tool for the right job' />
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
+<SlideHeadline sectionTitle='Cypress'>
   e2e and integration testing
 </SlideHeadline>
-
 
 <Center>
 
@@ -48,25 +33,17 @@ import Portrait from './components/portrait'
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Example app
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Example app</SlideHeadline>
 
 <Center>
 
-<Counter/>
+<Counter />
 
 </Center>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Testcases
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Testcases</SlideHeadline>
 
 1. Basic render 🎉
 2. Counter logic 🧮
@@ -74,27 +51,15 @@ import Portrait from './components/portrait'
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  In action
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>In action</SlideHeadline>
 
-<LargeImage
-  src="images/cypress-example.png"
-/>
+<LargeImage src='images/cypress-example.png' />
 
-<Notes>
-Life demo time.
-</Notes>
+<Notes>Life demo time.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Setup
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Setup</SlideHeadline>
 
 ```javascript
 // Basic file structure some.spec.js.
@@ -102,21 +67,15 @@ Life demo time.
 /// <reference types="Cypress" />
 
 context('Some component', () => {
-
   it('should do something', () => {
     cy.doThings().assert('to.be', true)
   })
-
 })
 ```
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Coding
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 ### 1. Basic render 🎉
 
@@ -127,39 +86,26 @@ it('should have a headline', () => {
 })
 ```
 
-<Notes>
-  Can get elements and assert their presence.
-</Notes>
+<Notes>Can get elements and assert their presence.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Coding
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 ### 1. Basic render 🎉
 
 ```javascript
 it('should have the right headline', () => {
   cy.visit('/')
-  cy.get('h1')
-    .contains('Testing page')
+  cy.get('h1').contains('Testing page')
 })
 ```
 
-<Notes>
-  We can find text within an element.
-</Notes>
+<Notes>We can find text within an element.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Coding
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 ### 2. Counter logic 🧮
 
@@ -170,17 +116,11 @@ it('should initially have a count of 0', () => {
 })
 ```
 
-<Notes>
-  Use data-testid to decouple tests from every day development.
-</Notes>
+<Notes>Use data-testid to decouple tests from every day development.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Coding
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 ### 2. Counter logic 🧮
 
@@ -193,17 +133,14 @@ it('should increment', () => {
 ```
 
 <Notes>
-  We can interact with elements.<br/>
+  We can interact with elements.
+  <br />
   click, type, select, check
 </Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Coding
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 ### 2. Counter logic 🧮
 
@@ -216,17 +153,11 @@ it('should increment multiple times', () => {
 })
 ```
 
-<Notes>
-  Good tests check multiple / all cases.
-</Notes>
+<Notes>Good tests check multiple / all cases.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Coding
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 ### 3. Messsage display 📜
 
@@ -244,23 +175,11 @@ it('should display message on click', () => {
 
 ---
 
-<BackgroundImage
-  src="images/earth.jpg"
-  credit="Photo by NASA on Unsplash"
-  creditLink="https://unsplash.com/photos/Q1p7bh3SHj8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-/>
-
-<Impact onImage={true}>
-  Beyond the basics
-</Impact>
+<Interlude text='🚀 Beyond the basics' />
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## What to run
 
@@ -274,11 +193,7 @@ it.skip('should skip this', () => {})
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Using previous state
 
@@ -286,21 +201,17 @@ it.skip('should skip this', () => {})
 it('should increment from previous value', () => {
   cy.visit('/')
   cy.get('[data-testid="count-output"]')
-    .invoke('text').then(text => {
+    .invoke('text')
+    .then(text => {
       cy.get('[data-testid="button-increment"]').click()
-      cy.get('[data-testid="count-output"]')
-        .contains(parseInt(text) + 1)
+      cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
     })
 })
 ```
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Cypress yields
 
@@ -312,11 +223,7 @@ Thus we need to chain `.then()` should we<br/>want to use values from previous c
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Fixtures
 
@@ -324,31 +231,23 @@ Thus we need to chain `.then()` should we<br/>want to use values from previous c
 it('should compare to fixture', () => {
   cy.visit('/')
   cy.fixture('data').then(dataFixture => {
-    cy.get('.data-element')
-      .contains(dataFixture)
+    cy.get('.data-element').contains(dataFixture)
   })
 })
 ```
 
-<Notes>
-  Fixtures are pre-defined datasets.
-</Notes>
+<Notes>Fixtures are pre-defined datasets.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Mocks and fixtures
 
 ```javascript
 it('should mock requests', () => {
   cy.server()
-  cy.route(/some\/regex/, 'fixture:response.json')
-    .as('getData')
+  cy.route(/some\/regex/, 'fixture:response.json').as('getData')
   cy.visit('/loads/data')
   cy.get('[data-testid="data"]')
 })
@@ -356,11 +255,7 @@ it('should mock requests', () => {
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Aliases
 
@@ -374,17 +269,11 @@ it('should ...', function() {
 })
 ```
 
-<Notes>
-  Aliases need the function keyword.
-</Notes>
+<Notes>Aliases need the function keyword.</Notes>
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Do it programmatically
 
@@ -406,11 +295,7 @@ cy.request({
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Custom Commands
 
@@ -427,11 +312,7 @@ beforeEach(() => {
 
 ---
 
-<SlideHeadline
-  sectionTitle="Cypress"
->
-  Advanced
-</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
 ## Best Practices
 
@@ -447,11 +328,7 @@ Speed up your tests by logging in programmatically.
 
 ---
 
-<SlideHeadline
-  sectionTitle="Presentation"
->
-  
-</SlideHeadline>
+<SlideHeadline sectionTitle='Presentation' />
 
 ## Resources
 
@@ -462,18 +339,13 @@ Speed up your tests by logging in programmatically.
 
 ---
 
-export default Central
-
-# 🏁 THE END 🏁
+<Interlude
+  style={{ justifyContent: 'center', borderBottom: 0 }}
+  text='🏁 The End 🏁'
+/>
 
 ---
 
-<BackgroundImage
-  src="images/questions.jpg"
-  credit="Photo by Dominik VO on Unsplash"
-  creditLink="https://unsplash.com/photos/lNeIjS1rXus?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-/>
+<Interlude text='🤔 Questions?' />
 
-<Impact onImage={true}>
-  Questions?
-</Impact>
+Find my social media and blog through: [HendrikWallbaum.de](https://hendrikwallbaum.de)
