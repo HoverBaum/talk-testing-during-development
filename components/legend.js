@@ -8,18 +8,17 @@ import { css, jsx } from '@emotion/core'
 export const BackgroundImage = ({items}) => (
   <div
     css={css`
-      display: flex;
-      flex-direction: row;
-      max-width: 80vw;
-      min-width: 50vw;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      width: 60rem;
+      display: grid;
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      grid-row-gap: 1rem;
+      margin: 0 auto;
     `}
   >
     {items.map(item => (
       <div
         css={css`
-          width: 45%;
           margin-top: 1em;
         `}
       >
