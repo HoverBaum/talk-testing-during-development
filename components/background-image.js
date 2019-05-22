@@ -2,7 +2,7 @@
 import { css, jsx } from '@emotion/core'
 import Credit from './credit'
 
-export const BackgroundImage = ({src, credit, creditLink}) => (
+export const BackgroundImage = ({ src, credit, creditLink }) => (
   <div
     css={css`
       background: url(${src}) no-repeat center;
@@ -19,19 +19,12 @@ export const BackgroundImage = ({src, credit, creditLink}) => (
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: linear-gradient(to bottom right,#002f4b,#dc4225);
+        background-image: linear-gradient(to bottom right, #002f4b, #dc4225);
         opacity: 0.8;
       }
     `}
   >
-
-    {credit ? (
-      <Credit
-        credit={credit}
-        creditLink={creditLink}
-      />
-    ) : ''}
-
+    {credit ? <Credit credit={credit} creditLink={creditLink} onImage /> : ''}
   </div>
 )
 
