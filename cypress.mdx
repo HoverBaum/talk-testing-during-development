@@ -22,7 +22,7 @@ import Interlude from './components/interlude'
 ---
 
 <SlideHeadline sectionTitle='Cypress'>
-  e2e and integration testing
+  E2E and integration testing
 </SlideHeadline>
 
 <Center>
@@ -77,7 +77,7 @@ context('Some component', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-### 1. Basic render 🎉
+1. Basic render 🎉
 
 ```javascript
 it('should have a headline', () => {
@@ -92,7 +92,7 @@ it('should have a headline', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-### 1. Basic render 🎉
+1. Basic render 🎉
 
 ```javascript
 it('should have the right headline', () => {
@@ -107,7 +107,7 @@ it('should have the right headline', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-### 2. Counter logic 🧮
+2. Counter logic 🧮
 
 ```javascript
 it('should initially have a count of 0', () => {
@@ -122,7 +122,7 @@ it('should initially have a count of 0', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-### 2. Counter logic 🧮
+2. Counter logic 🧮
 
 ```javascript
 it('should increment', () => {
@@ -142,7 +142,7 @@ it('should increment', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-### 2. Counter logic 🧮
+2. Counter logic 🧮
 
 ```javascript
 it('should increment multiple times', () => {
@@ -159,7 +159,7 @@ it('should increment multiple times', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-### 3. Messsage display 📜
+3. Messsage display 📜
 
 ```javascript
 it('should display message on click', () => {
@@ -181,7 +181,7 @@ it('should display message on click', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
-## What to run
+What to run?
 
 Cypress provides ways to decide, which tests to run.
 
@@ -195,7 +195,7 @@ it.skip('should skip this', () => {})
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
-## Using previous state
+Using previous state
 
 ```javascript
 it('should increment from previous value', () => {
@@ -213,11 +213,9 @@ it('should increment from previous value', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
-## Cypress yields
+Cypress returns Promise like values.
 
-Cypress yields values in a Promise like fashion.
-
-You can **not** `await` Cypress commands
+You can **not** `await` Cypress commands.
 
 Thus we need to chain `.then()` should we<br/>want to use values from previous commands.
 
@@ -225,7 +223,7 @@ Thus we need to chain `.then()` should we<br/>want to use values from previous c
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
-## Fixtures
+Fixtures
 
 ```javascript
 it('should compare to fixture', () => {
@@ -242,7 +240,7 @@ it('should compare to fixture', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
-## Mocks and fixtures
+Mocks and fixtures
 
 ```javascript
 it('should mock requests', () => {
@@ -257,7 +255,7 @@ it('should mock requests', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
 
-## Aliases
+Aliases
 
 ```javascript
 before(() => {
@@ -273,11 +271,24 @@ it('should ...', function() {
 
 ---
 
-<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
 
-## Do it programmatically
+Consider what to E2E-test.
+
+Expose APIs from your application.
+
+`.get()` does not need positive assertions.
+
+Speed up your tests by logging in programmatically.
+
+[More best practices](https://docs.cypress.io/guides/references/best-practices.html)
+
+---
+
+<SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
 
 ```javascript
+// Programmatic login.
 cy.request({
   method: 'POST',
   url: 'https://your.domain',
@@ -295,9 +306,9 @@ cy.request({
 
 ---
 
-<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
+<SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
 
-## Custom Commands
+Custom Commands
 
 ```javascript
 Cypress.Commands.add('login', (username, password) => {
@@ -312,25 +323,9 @@ beforeEach(() => {
 
 ---
 
-<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
-
-## Best Practices
-
-Consider what to e2e-test.
-
-Expose APIs from your application.
-
-`.get()` does not need positive assertions.
-
-Speed up your tests by logging in programmatically.
-
-[More best practices](https://docs.cypress.io/guides/references/best-practices.html)
-
----
-
 <SlideHeadline sectionTitle='Presentation' />
 
-## Resources
+Resources
 
 - [Cypress Guides](https://docs.cypress.io/guides/overview/why-cypress.html#In-a-nutshell)
 - [Cypress API](https://docs.cypress.io/api/api/table-of-contents.html)
@@ -340,7 +335,7 @@ Speed up your tests by logging in programmatically.
 ---
 
 <Interlude
-  style={{ justifyContent: 'center', borderBottom: 0 }}
+  style={{ justifyContent: 'center' }}
   text='🏁 The End 🏁'
 />
 
@@ -348,4 +343,4 @@ Speed up your tests by logging in programmatically.
 
 <Interlude text='🤔 Questions?' />
 
-Find my social media and blog through: [HendrikWallbaum.de](https://hendrikwallbaum.de)
+Find my social media and blog on: [HendrikWallbaum.de](https://hendrikwallbaum.de)
