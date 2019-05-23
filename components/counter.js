@@ -33,8 +33,8 @@ class Counter extends React.Component {
           <div className="website__header__circle"></div>
           <div className="website__header__circle"></div>
         </div>
-        <div css={css`padding: 2rem;`}>
-          <h1 css={{marginTop: 0}}>Testing Page</h1>
+        <div css={css`padding: 2rem; min-width: 50rem;`}>
+          <h2 css={{marginTop: 0, fontWeight: 'normal'}}>Testing Page</h2>
 
           <button style={{fontSize: '2rem'}} onClick={this.onIncrement}>Increment</button>
 
