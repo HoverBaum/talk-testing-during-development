@@ -2,7 +2,9 @@ import React from 'react'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-const Interlude = ({ text, src, style = {} }) => (
+const Interlude = ({ text, style = {} }) => {
+  console.log(text)
+  return (
   <div>
     <h2
       css={{
@@ -15,12 +17,8 @@ const Interlude = ({ text, src, style = {} }) => (
       }}
     >
       {text}
-      <img
-        src={src}
-        css={{ widht: '1em', height: '1em', marginLeft: '0.3em' }}
-      />
     </h2>
   </div>
-)
+)}
 
 export default Interlude
