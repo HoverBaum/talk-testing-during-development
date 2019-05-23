@@ -7,6 +7,7 @@ const SlideHeadline = ({ children, sectionTitle }) => (
     css={{
       position: 'absolute',
       top: 0,
+      left: '10vw',
       borderBottom: '1px solid #334a5e',
       width: '80vw',
       fontWeight: 300,
