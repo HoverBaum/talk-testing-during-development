@@ -28,7 +28,7 @@ const OpeningSlide = ({ title, author }) => (
             color: '#cc4a1a'
           }}
         >
-          {author}
+          by {author}
         </h4>
       </a>
     )}
