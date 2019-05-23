@@ -10,7 +10,6 @@ const SlideHeadline = ({ children, sectionTitle }) => (
       borderBottom: '1px solid #334a5e',
       width: '80vw',
       fontWeight: 300,
-      marginTop: '0.25em',
       color: '#334a5e'
     }}
   >
