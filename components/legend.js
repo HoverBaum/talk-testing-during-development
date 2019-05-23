@@ -16,11 +16,12 @@ export const BackgroundImage = ({items}) => (
       margin: 0 auto;
     `}
   >
-    {items.map(item => (
+    {items.map((item, index) => (
       <div
         css={css`
           margin-top: 1em;
         `}
+        key={`${index}-${item.title}`}
       >
         {item.src ? <img src={item.src}
           css={css`
