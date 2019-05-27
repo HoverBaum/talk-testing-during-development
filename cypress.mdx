@@ -74,6 +74,8 @@ context('Some component', () => {
 })
 ```
 
+<Credit credit="Test Structure" creditLink="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Test-Structure" />
+
 ---
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
@@ -87,7 +89,9 @@ it('should have a headline', () => {
 })
 ```
 
-<Notes>Can get elements and assert their presence.</Notes>
+<Notes>Can get elements and assert their presence. Cypress will retry for us.</Notes>
+
+<Credit credit="Cypress introduction" creditLink="https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html" />
 
 ---
 
@@ -104,6 +108,8 @@ it('should have the right headline', () => {
 
 <Notes>We can find text within an element.</Notes>
 
+<Credit credit="Cypress contains" creditLink="https://docs.cypress.io/api/commands/contains.html" />
+
 ---
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
@@ -118,6 +124,8 @@ it('should initially have a count of 0', () => {
 ```
 
 <Notes>Use data-testid to decouple tests from every day development.</Notes>
+
+<Credit credit="Testids as a best practice" creditLink="https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements" />
 
 ---
 
@@ -138,6 +146,8 @@ it('should increment', () => {
   <br />
   click, type, select, check
 </Notes>
+
+<Credit credit="Interacting with Elements" creditLink="https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability" />
 
 ---
 
@@ -174,6 +184,8 @@ it('should display message on click', () => {
   Can get() dynamically added elements. Cypress will retry this for you.
 </Notes>
 
+<Credit credit="Cypress retries commands" creditLink="https://docs.cypress.io/guides/core-concepts/retry-ability.html" />
+
 ---
 
 <Interlude text='🚀 Beyond the basics' />
@@ -189,6 +201,8 @@ it.only('should only run this', () => {})
 
 it.skip('should skip this', () => {})
 ```
+
+<Credit credit="Excluding and Including Tests" creditLink="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Excluding-and-Including-Tests" />
 
 ---
 
@@ -208,6 +222,8 @@ it('should increment from previous value', () => {
 })
 ```
 
+<Credit credit="Cypress invoke" creditLink="https://docs.cypress.io/api/commands/invoke.html#Syntax" />
+
 ---
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
@@ -217,6 +233,8 @@ Cypress returns Promise like values.
 You can **not** `await` Cypress commands.
 
 Thus we need to chain `.then()` should we<br/>want to use values from previous commands.
+
+<Credit credit="Cypress Subject Management" creditLink="https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Subject-Management" />
 
 ---
 
@@ -235,6 +253,8 @@ it('should compare to fixture', () => {
 
 <Notes>Fixtures are pre-defined datasets.</Notes>
 
+<Credit credit="Cypress fixtures" creditLink="https://docs.cypress.io/api/commands/fixture.html" />
+
 ---
 
 <SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
@@ -249,6 +269,8 @@ it('should mock requests', () => {
   cy.get('[data-testid="data"]')
 })
 ```
+
+<Credit credit="Fixtures for mocking" creditLink="https://docs.cypress.io/guides/guides/network-requests.html#Fixtures" />
 
 ---
 
@@ -267,6 +289,8 @@ it('should ...', function() {
 ```
 
 <Notes>Aliases need the function keyword.</Notes>
+
+<Credit credit="Cypress aliases" creditLink="https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html#Return-Values" />
 
 ---
 
@@ -303,6 +327,8 @@ cy.request({
 })
 ```
 
+<Credit credit="Cypress best practices" creditLink="https://docs.cypress.io/guides/references/best-practices.html" />
+
 ---
 
 <SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
@@ -319,6 +345,8 @@ beforeEach(() => {
   cy.login('username', 'password')
 })
 ```
+
+<Credit credit="Cypress best practices" creditLink="https://docs.cypress.io/guides/references/best-practices.html" />
 
 ---
 
