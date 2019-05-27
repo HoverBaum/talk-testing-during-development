@@ -1,7 +1,6 @@
 /// <reference types="Cypress" />
 
 context('Test site', () => {
-
   it('should have a headline', () => {
     cy.visit('/')
     cy.get('h1')
@@ -9,8 +8,7 @@ context('Test site', () => {
 
   it('should have the right headline', () => {
     cy.visit('/')
-    cy.get('h1')
-      .contains('Testing page')
+    cy.get('h1').contains('Testing page')
   })
 
   it('should initially have a count of 0 (zero)', () => {
@@ -33,18 +31,19 @@ context('Test site', () => {
 
   it('should increment from previous value', () => {
     cy.visit('/')
-    cy.get('[data-testid="count-output"]').invoke('text').then(text => {
-      cy.get('[data-testid="button-increment"]').click()
-      cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
-    })
+    cy.get('[data-testid="count-output"]')
+      .invoke('text')
+      .then(text => {
+        cy.get('[data-testid="button-increment"]').click()
+        cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
+      })
   })
 
   it('should compare to fixture', () => {
     cy.visit('/')
     cy.fixture('data').then(dataFixture => {
-      cy.get('[data-testid="count-output"]')
-        .contains(dataFixture)
-    })    
+      cy.get('[data-testid="count-output"]').contains(dataFixture)
+    })
   })
 
   it('should display message on click', () => {
@@ -55,10 +54,8 @@ context('Test site', () => {
 
   it('should mock requests', () => {
     cy.server()
-    cy.route(/data\/response/, 'fixture:response.json')
-      .as('getData')
+    cy.route(/data\/response/, 'fixture:response.json').as('getData')
     cy.visit('/data-loading.html')
     cy.get('[data-testid="data"]')
   })
-
 })

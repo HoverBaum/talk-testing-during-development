@@ -5,7 +5,7 @@ import { css, jsx } from '@emotion/core'
 const OpeningSlide = ({ title, author, subtitle }) => (
   <hgroup
     css={{
-      width: '70vw'
+      width: '70vw',
     }}
   >
     <h1
@@ -14,7 +14,7 @@ const OpeningSlide = ({ title, author, subtitle }) => (
         fontSize: '2.5em',
         color: '#334a5e',
         borderBottom: '1px solid #334a5e',
-        paddingBottom: '1rem'
+        paddingBottom: '1rem',
       }}
     >
       {title}
@@ -23,10 +23,10 @@ const OpeningSlide = ({ title, author, subtitle }) => (
       <h4
         css={{
           marginTop: '2rem',
-          color: '#cc4a1a'
+          color: '#cc4a1a',
         }}
       >
-        { subtitle }
+        {subtitle}
       </h4>
     )}
     {author && (
@@ -38,7 +38,7 @@ const OpeningSlide = ({ title, author, subtitle }) => (
             width: '80vw',
             marginTop: '2rem',
             color: '#cc4a1a',
-            textAlign: 'right'
+            textAlign: 'right',
           }}
         >
           by {author}

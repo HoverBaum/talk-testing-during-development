@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-export const OnBackground = ({children}) => (
+export const OnBackground = ({ children }) => (
   <div
     css={css`
       background: inherit;

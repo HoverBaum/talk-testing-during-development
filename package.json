@@ -5,13 +5,15 @@
   "scripts": {
     "start": "mdx-deck index.js --port 8282",
     "build": "rm -rf dist && mdx-deck build index.js && cp -r images dist/images",
-    "export": "slides-to-pdf http://localhost:8282"
+    "export": "slides-to-pdf http://localhost:8282",
+    "format": "prettier --config .prettierrc.js --write  \"{,!(node_modules)/**/}*.{js, mdx}\""
   },
   "author": "",
   "devDependencies": {
     "@emotion/core": "^10.0.10",
     "@hoverbaum/slides-to-pdf": "^0.4.0",
     "mdx-deck": "^2.0.6",
+    "prettier": "1.17.1",
     "prism-react-renderer": "^0.1.6"
   }
 }

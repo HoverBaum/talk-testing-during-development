@@ -1,9 +1,9 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-export const Center = ({children}) => (
+export const Center = ({ children }) => (
   <div
-    css={css`     
+    css={css`
       display: flex;
       justify-content: center;
     `}

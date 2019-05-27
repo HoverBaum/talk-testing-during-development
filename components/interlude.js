@@ -11,7 +11,7 @@ const Interlude = ({ text, style = {} }) => (
         borderBottom: '1px solid #334a5e',
         display: 'flex',
         alignItems: 'center',
-        ...style
+        ...style,
       }}
     >
       {text}
