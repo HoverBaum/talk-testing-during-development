@@ -5,15 +5,25 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-export const BackgroundImage = ({items}) => (
+const styleForThree = css`
+  width: 100%;
+  grid-template-columns: 30% 30% 30%;
+  grid-template-rows: 100%;
+`
+
+const styleForFour = css`
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  width: 60rem;
+`
+
+export const BackgroundImage = ({ items }) => (
   <div
     css={css`
-      width: 60rem;
       display: grid;
-      grid-template-columns: 50% 50%;
-      grid-template-rows: 50% 50%;
       grid-row-gap: 1rem;
       margin: 0 auto;
+      ${items.length === 3 ? styleForThree : styleForFour}
     `}
   >
     {items.map((item, index) => (
