@@ -1,6 +1,7 @@
 {
   "name": "demo-site",
   "scripts": {
+    "pretests:run": "rm -rf results",
     "start": "live-server --port=8888 --no-browser",
     "test": "cypress open",
     "tests:run": "cypress run"
