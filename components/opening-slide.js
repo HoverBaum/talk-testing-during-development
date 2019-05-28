@@ -35,7 +35,7 @@ const OpeningSlide = ({ title, author, subtitle }) => (
           css={{
             position: 'absolute',
             bottom: 0,
-            width: '80vw',
+            width: '70vw',
             marginTop: '2rem',
             color: '#cc4a1a',
             textAlign: 'right',
