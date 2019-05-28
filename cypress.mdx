@@ -74,11 +74,12 @@ describe('Some component', () => {
 })
 ```
 
-<Credit credit="Test Structure" creditLink="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Test-Structure" />
+<Credit
+  credit='Test Structure'
+  creditLink='https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Test-Structure'
+/>
 
-<Notes>
-  Check out the credit links for more information.
-</Notes>
+<Notes>Check out the credit links for more information.</Notes>
 
 ---
 
@@ -93,9 +94,14 @@ it('should have a headline', () => {
 })
 ```
 
-<Notes>Can get elements and assert their presence. Cypress will retry for us.</Notes>
+<Notes>
+  Can get elements and assert their presence. Cypress will retry for us.
+</Notes>
 
-<Credit credit="Cypress introduction" creditLink="https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html" />
+<Credit
+  credit='Cypress introduction'
+  creditLink='https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html'
+/>
 
 ---
 
@@ -112,7 +118,10 @@ it('should have the right headline', () => {
 
 <Notes>We can find text within an element.</Notes>
 
-<Credit credit="Cypress contains" creditLink="https://docs.cypress.io/api/commands/contains.html" />
+<Credit
+  credit='Cypress contains'
+  creditLink='https://docs.cypress.io/api/commands/contains.html'
+/>
 
 ---
 
@@ -129,7 +138,10 @@ it('should initially have a count of 0', () => {
 
 <Notes>Use data-testid to decouple tests from every day development.</Notes>
 
-<Credit credit="Testids as a best practice" creditLink="https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements" />
+<Credit
+  credit='Testids as a best practice'
+  creditLink='https://docs.cypress.io/guides/references/best-practices.html#Selecting-Elements'
+/>
 
 ---
 
@@ -151,7 +163,10 @@ it('should increment', () => {
   click, type, select, check
 </Notes>
 
-<Credit credit="Interacting with Elements" creditLink="https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability" />
+<Credit
+  credit='Interacting with Elements'
+  creditLink='https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability'
+/>
 
 ---
 
@@ -188,7 +203,10 @@ it('should display message on click', () => {
   Can get() dynamically added elements. Cypress will retry this for you.
 </Notes>
 
-<Credit credit="Cypress retries commands" creditLink="https://docs.cypress.io/guides/core-concepts/retry-ability.html" />
+<Credit
+  credit='Cypress retries commands'
+  creditLink='https://docs.cypress.io/guides/core-concepts/retry-ability.html'
+/>
 
 ---
 
@@ -206,7 +224,10 @@ it.only('should only run this', () => {})
 it.skip('should skip this', () => {})
 ```
 
-<Credit credit="Excluding and Including Tests" creditLink="https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Excluding-and-Including-Tests" />
+<Credit
+  credit='Excluding and Including Tests'
+  creditLink='https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Excluding-and-Including-Tests'
+/>
 
 ---
 
@@ -226,7 +247,10 @@ it('should increment from previous value', () => {
 })
 ```
 
-<Credit credit="Cypress invoke" creditLink="https://docs.cypress.io/api/commands/invoke.html#Syntax" />
+<Credit
+  credit='Cypress invoke'
+  creditLink='https://docs.cypress.io/api/commands/invoke.html#Syntax'
+/>
 
 ---
 
@@ -238,7 +262,10 @@ You can **not** `await` Cypress commands.
 
 Thus we need to chain `.then()` should we<br/>want to use values from previous commands.
 
-<Credit credit="Cypress Subject Management" creditLink="https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Subject-Management" />
+<Credit
+  credit='Cypress Subject Management'
+  creditLink='https://docs.cypress.io/guides/core-concepts/introduction-to-cypress.html#Subject-Management'
+/>
 
 ---
 
@@ -257,7 +284,10 @@ it('should compare to fixture', () => {
 
 <Notes>Fixtures are pre-defined datasets.</Notes>
 
-<Credit credit="Cypress fixtures" creditLink="https://docs.cypress.io/api/commands/fixture.html" />
+<Credit
+  credit='Cypress fixtures'
+  creditLink='https://docs.cypress.io/api/commands/fixture.html'
+/>
 
 ---
 
@@ -274,7 +304,10 @@ it('should mock requests', () => {
 })
 ```
 
-<Credit credit="Fixtures for mocking" creditLink="https://docs.cypress.io/guides/guides/network-requests.html#Fixtures" />
+<Credit
+  credit='Fixtures for mocking'
+  creditLink='https://docs.cypress.io/guides/guides/network-requests.html#Fixtures'
+/>
 
 ---
 
@@ -294,7 +327,10 @@ it('should ...', function() {
 
 <Notes>Aliases need the function keyword.</Notes>
 
-<Credit credit="Cypress aliases" creditLink="https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html#Return-Values" />
+<Credit
+  credit='Cypress aliases'
+  creditLink='https://docs.cypress.io/guides/core-concepts/variables-and-aliases.html#Return-Values'
+/>
 
 ---
 
@@ -315,14 +351,13 @@ Speed up your tests by logging in programmatically.
 <SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
 
 ```javascript
-// Programmatic login.
 cy.request({
   method: 'POST',
   url: 'https://your.domain',
   body: {
     password,
-    username
-  }
+    username,
+  },
 }).then(response => {
   expect(response.isOkStatusCode).to.be.true
   const id = response.body.id
@@ -331,7 +366,10 @@ cy.request({
 })
 ```
 
-<Credit credit="Cypress best practices" creditLink="https://docs.cypress.io/guides/references/best-practices.html" />
+<Credit
+  credit='Cypress best practices'
+  creditLink='https://docs.cypress.io/guides/references/best-practices.html'
+/>
 
 ---
 
@@ -350,7 +388,10 @@ beforeEach(() => {
 })
 ```
 
-<Credit credit="Cypress best practices" creditLink="https://docs.cypress.io/guides/references/best-practices.html" />
+<Credit
+  credit='Cypress best practices'
+  creditLink='https://docs.cypress.io/guides/references/best-practices.html'
+/>
 
 ---
 
@@ -369,11 +410,14 @@ beforeEach(() => {
 
 Cypress is build on Mocha and has acccess to all [build in reporters](https://mochajs.org/#reporters).
 
-<Credit credit='Cypress reporter docs' creditLink='https://docs.cypress.io/guides/tooling/reporters.html#Custom-Reporters' />
-
+<Credit
+  credit='Cypress reporter docs'
+  creditLink='https://docs.cypress.io/guides/tooling/reporters.html#Custom-Reporters'
+/>
 
 <Notes>
-  Good moment to mention cypress.json in general.<br />
+  Good moment to mention cypress.json in general.
+  <br />
   Also remember to delete the results folder before running tests.
 </Notes>
 
@@ -381,7 +425,7 @@ Cypress is build on Mocha and has acccess to all [build in reporters](https://mo
 
 <OpeningSlide
   title="🧐 Web Apps don't need no manual testing!?"
-  subtitle="Or do they?"
+  subtitle='Or do they?'
 />
 
 ---
@@ -397,10 +441,7 @@ Resources
 
 ---
 
-<Interlude
-  style={{ justifyContent: 'center' }}
-  text='🏁 The End 🏁'
-/>
+<Interlude style={{ justifyContent: 'center' }} text='🏁 The End 🏁' />
 
 ---
 
