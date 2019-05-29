@@ -90,20 +90,20 @@ Developer for fun 🎉
   items={[
     {
       src: '/images/meetings-calendar.png',
-      title: 'Meetings'
+      title: 'Meetings',
     },
     {
       src: '/images/working-2-construction.png',
-      title: 'Work on product'
+      title: 'Work on product',
     },
     {
       src: '/images/testing-detective.png',
-      title: 'Manual testing'
+      title: 'Manual testing',
     },
     {
       src: '/images/releasing-rocket.png',
-      title: 'Releasing software'
-    }
+      title: 'Releasing software',
+    },
   ]}
 />
 
@@ -128,6 +128,14 @@ import longTestingData from './scenarios/longTesting'
 import splitTestingData from './scenarios/splitTesting'
 
 <Timeline data={splitTestingData} />
+
+---
+
+<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
+
+import perfectTestingData from './scenarios/perfect'
+
+<Timeline data={perfectTestingData} />
 
 ---
 
@@ -168,19 +176,9 @@ High performing organizations:
 
 <Notes>
   Every good talk should backup their claims with some empirical evidence.
+  <br />
+  It is all about cycles.
 </Notes>
-
----
-
-<Quote size='3'>IT IS ALL ABOUT CYCLES</Quote>
-
----
-
-<SlideHeadline sectionTitle='My dream' />
-
-import perfectTestingData from './scenarios/perfect'
-
-<Timeline data={perfectTestingData} />
 
 ---
 
@@ -204,16 +202,16 @@ import perfectTestingData from './scenarios/perfect'
   items={[
     {
       emoji: '👨‍💻',
-      title: 'Developer'
+      title: 'Developer',
     },
     {
       emoji: '🧐',
-      title: 'Tester / QA'
+      title: 'Tester / QA',
     },
     {
       emoji: '🤖',
-      title: 'Computer'
-    }
+      title: 'Computer',
+    },
   ]}
 />
 
@@ -230,14 +228,14 @@ style={{
 <Timeline
   data={[
     {
-      types: ['development']
+      types: ['development'],
     },
     {
-      types: ['testing', 'release']
+      types: ['testing', 'release'],
     },
     {
-      types: ['testing']
-    }
+      types: ['testing'],
+    },
   ]}
 />
 
