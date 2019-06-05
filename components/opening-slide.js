@@ -6,6 +6,11 @@ const OpeningSlide = ({ title, author, subtitle }) => (
   <hgroup
     css={{
       width: '70vw',
+      position: 'fixed',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      zIndex: 1,
     }}
   >
     <h1
@@ -30,12 +35,13 @@ const OpeningSlide = ({ title, author, subtitle }) => (
       </h4>
     )}
     {author && (
-      <a href='https://hendrikwallbaum.de' target='_blank'>
+      <a
+        href='https://hendrikwallbaum.de'
+        target='_blank'
+        css={{ textDecoration: 'none' }}
+      >
         <h4
           css={{
-            position: 'absolute',
-            bottom: 0,
-            width: '70vw',
             marginTop: '2rem',
             color: '#cc4a1a',
             textAlign: 'right',

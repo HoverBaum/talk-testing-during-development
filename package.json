@@ -15,5 +15,8 @@
     "mdx-deck": "^2.0.6",
     "prettier": "1.17.1",
     "prism-react-renderer": "^0.1.6"
+  },
+  "dependencies": {
+    "react-particles-js": "^2.6.0"
   }
 }
