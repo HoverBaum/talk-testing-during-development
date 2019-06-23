@@ -2,7 +2,9 @@ import React from 'react'
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 
-const OpeningSlide = ({ title, author, subtitle }) => (
+// TODO: refactor title2 to accept children so that users can have a bigger impact.
+
+const OpeningSlide = ({ title, author, subtitle, title2 }) => (
   <hgroup
     css={{
       width: '70vw',
@@ -22,7 +24,7 @@ const OpeningSlide = ({ title, author, subtitle }) => (
         paddingBottom: '1rem',
       }}
     >
-      {title}
+      {title}{title2 ? ' - ' : ''}{title2 ? <span style={{color: '#cc4a1a'}}>{title2}</span> : ''}
     </h1>
     {subtitle && (
       <h4
