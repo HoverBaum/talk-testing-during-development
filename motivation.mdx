@@ -19,6 +19,10 @@ import OpeningSlide from './components/opening-slide'
 import Interlude from './components/interlude'
 import BackgroundBubbles from './components/background-bubbles'
 
+import splitTestingData from './scenarios/splitTesting'
+import perfectTestingData from './scenarios/perfect'
+import longTestingData from './scenarios/longTesting'
+
 <Head>
   <title>Testing</title>
 </Head>
@@ -77,8 +81,8 @@ Developer for fun 🎉
 <CustomSplit>
 
 - Find bugs before users do
-- Ensure we fulfil specification
-- Help future developers (us)
+- Ensure we fulfill specification
+- Help future developers
 
 <Center>
 
@@ -96,7 +100,7 @@ Developer for fun 🎉
 
 ---
 
-<Interlude text='📖 Story time' />
+<Interlude text='Story time 📖' />
 
 <Notes>I love to talk about personal experiences to convey motivation.</Notes>
 
@@ -112,7 +116,7 @@ Developer for fun 🎉
     },
     {
       src: '/images/working-2-construction.png',
-      title: 'Work on product',
+      title: 'Implementation work',
     },
     {
       src: '/images/testing-detective.png',
@@ -120,7 +124,7 @@ Developer for fun 🎉
     },
     {
       src: '/images/releasing-rocket.png',
-      title: 'Releasing software',
+      title: 'Releasing',
     },
   ]}
 />
@@ -133,9 +137,13 @@ Developer for fun 🎉
 
 ---
 
-<SlideHeadline sectionTitle='Story time'>Code Freeze</SlideHeadline>
+<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
 
-import longTestingData from './scenarios/longTesting'
+<Timeline data={perfectTestingData} />
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Code Freeze</SlideHeadline>
 
 <Timeline data={longTestingData} />
 
@@ -143,17 +151,7 @@ import longTestingData from './scenarios/longTesting'
 
 <SlideHeadline sectionTitle='Story time'>Manual Releases</SlideHeadline>
 
-import splitTestingData from './scenarios/splitTesting'
-
 <Timeline data={splitTestingData} />
-
----
-
-<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
-
-import perfectTestingData from './scenarios/perfect'
-
-<Timeline data={perfectTestingData} />
 
 ---
 
@@ -197,6 +195,12 @@ High performing organizations:
   <br />
   It is all about cycles.
 </Notes>
+
+---
+
+<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
+
+<Timeline data={perfectTestingData} />
 
 ---
 
