@@ -242,7 +242,8 @@ it('should increment from previous value', () => {
     .invoke('text')
     .then(text => {
       cy.get('[data-testid="button-increment"]').click()
-      cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
+      cy.get('[data-testid="count-output"]')
+        .contains(parseInt(text) + 1)
     })
 })
 ```
@@ -298,7 +299,7 @@ Mocks and fixtures
 ```javascript
 it('should mock requests', () => {
   cy.server()
-  cy.route(/some\/regex/, 'fixture:response.json').as('getData')
+  cy.route(/some\/regex/, 'fixture:response.json')
   cy.visit('/loads/data')
   cy.get('[data-testid="data"]')
 })
