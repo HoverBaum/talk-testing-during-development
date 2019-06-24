@@ -83,6 +83,25 @@ describe('Some component', () => {
 
 ---
 
+<SlideHeadline sectionTitle='Cypress'>Setup</SlideHeadline>
+
+cypress.json
+
+```json
+{
+  "baseUrl": "http://localhost:8888"
+}
+```
+
+<Credit
+  credit='Cypress.json'
+  creditLink='https://docs.cypress.io/api/cypress-api/config.html'
+/>
+
+<Notes>Check out the credit links for more information.</Notes>
+
+---
+
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
 1. Basic render 🎉
@@ -242,8 +261,7 @@ it('should increment from previous value', () => {
     .invoke('text')
     .then(text => {
       cy.get('[data-testid="button-increment"]').click()
-      cy.get('[data-testid="count-output"]')
-        .contains(parseInt(text) + 1)
+      cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
     })
 })
 ```
@@ -426,7 +444,7 @@ Cypress is build on Mocha and has acccess to all [build in reporters](https://mo
 
 <OpeningSlide
   title="Web Apps don't need no manual testing!?"
-  title2="Or do they? 🤷‍♂️"
+  title2='Or do they? 🤷‍♂️'
 />
 
 ---
@@ -446,6 +464,6 @@ Resources 📚
 
 ---
 
-<Interlude text='🤔 Questions?' />
+<Interlude text='Questions? 🤔' />
 
 Find my social media and blog on: [HendrikWallbaum.de](https://hendrikwallbaum.de)
