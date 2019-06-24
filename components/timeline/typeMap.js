@@ -26,7 +26,7 @@ const typeMap = [
   },
   {
     type: 'perfect',
-    color:  '#FFD670', //'#F9DE47',
+    color: '#FFD670', //'#F9DE47',
     emojiImg: 'perfect-day.png',
   },
 ]

@@ -24,7 +24,9 @@ const OpeningSlide = ({ title, author, subtitle, title2 }) => (
         paddingBottom: '1rem',
       }}
     >
-      {title}{title2 ? ' - ' : ''}{title2 ? <span style={{color: '#cc4a1a'}}>{title2}</span> : ''}
+      {title}
+      {title2 ? ' - ' : ''}
+      {title2 ? <span style={{ color: '#cc4a1a' }}>{title2}</span> : ''}
     </h1>
     {subtitle && (
       <h4
