@@ -6,6 +6,7 @@ export const Center = ({ children }) => (
     css={css`
       display: flex;
       justify-content: center;
+      width: 100%;
     `}
   >
     {children}

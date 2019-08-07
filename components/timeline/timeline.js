@@ -39,8 +39,12 @@ const Timeline = ({ data = [] }) => (
               style={{ backgroundColor: part.color }}
             >
               <img
-                src={`images/${part.emojiImg}`}
-                alt={part.emojiImg.replace(/\..*$/, '')}
+                src={
+                  part.emojiImg.length.length
+                    ? `images/${part.emojiImg}`
+                    : part.emojiImg
+                }
+                alt={part.type}
               />
             </div>
           ))}

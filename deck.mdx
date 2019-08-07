@@ -1,5 +1,7 @@
 import { Head, Notes } from 'mdx-deck'
-import { Split } from 'mdx-deck/layouts'
+
+import myTheme from './lib/theme'
+export const theme = myTheme
 
 import CustomSplit from './lib/split.layout.js'
 import Central from './lib/central.layout.js'
@@ -15,8 +17,276 @@ import Impact from './components/impact'
 import Credit from './components/credit'
 import SlideHeadline from './components/slide-headline'
 import Portrait from './components/portrait'
-import Interlude from './components/interlude'
 import OpeningSlide from './components/opening-slide'
+import Interlude from './components/interlude'
+import BackgroundBubbles from './components/background-bubbles'
+import TableCaption from './components/table-caption'
+
+import splitTestingData from './scenarios/splitTesting'
+import perfectTestingData from './scenarios/perfect'
+import longTestingData from './scenarios/longTesting'
+
+<!-- Import Images as a workaround for static files not working. -->
+<!-- https://github.com/jxnblk/mdx-deck/issues/401 -->
+
+import PortraitImage from './images/portrait.jpg'
+import CypressExampleImage from './images/cypress-example.png'
+import LegendImageMeetings from './images/meetings-calendar.png'
+import LegendImageWorking from './images/working-2-construction.png'
+import LegendImageTesting from './images/testing-detective.png'
+import LegendImageReleasing from './images/releasing-rocket.png'
+import DetectiveEmojiImage from './images/testing-detective.png'
+import CypressLogoImage from './images/cypress-logo.png'
+
+<Head>
+  <title>Testing</title>
+</Head>
+
+<!-- Presentation start -->
+
+<Central>
+
+<OpeningSlide
+  title="Web Apps don't need no manual testing 🧐"
+  author='Hendrik Wallbaum'
+/>
+
+</Central>
+
+<BackgroundBubbles />
+
+---
+
+<Central>
+
+<OpeningSlide
+  title="Web Apps don't need no manual testing 🧐"
+  author='Hendrik Wallbaum'
+/>
+
+</Central>
+
+---
+
+<CustomSplit>
+
+<Center>
+
+<Portrait src={PortraitImage} />
+
+</Center>
+
+## Hendrik
+
+Developer for fun 🎉
+
+Consultant @ <a href="https://netlight.com" target="_blank">Netlight</a>
+
+</CustomSplit>
+
+---
+
+<Interlude
+  style={{ borderBottom: 0 }}
+  text='The why and how of End-to-End testing for Web Apps.'
+/>
+
+---
+
+<SlideHeadline sectionTitle='Testing'>Why we do it</SlideHeadline>
+
+<CustomSplit>
+
+- Find bugs before users do
+- Ensure we fulfill specification
+- Help future developers
+
+<Center>
+
+<img src={DetectiveEmojiImage} alt='Detective Emoji' />
+
+</Center>
+
+</CustomSplit>
+
+<Notes>
+  Examples to show why how we test is important
+  <br />
+  Time investment
+</Notes>
+
+---
+
+<Interlude text='Story time 📖' />
+
+<Notes>I love to talk about personal experiences to convey motivation.</Notes>
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Development tasks</SlideHeadline>
+
+<Legend
+  items={[
+    {
+      src: LegendImageMeetings,
+      title: 'Meetings',
+    },
+    {
+      src: LegendImageWorking,
+      title: 'Implementation work',
+    },
+    {
+      src: LegendImageTesting,
+      title: 'Manual testing',
+    },
+    {
+      src: LegendImageReleasing,
+      title: 'Releasing',
+    },
+  ]}
+/>
+
+<Notes>
+  Most people meet every two weeks. Because "scrum" or "agile".
+  <br />
+  These are the processes / actions we will see.
+</Notes>
+
+---
+
+<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
+
+<Timeline data={perfectTestingData} />
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Code Freeze</SlideHeadline>
+
+<Timeline data={longTestingData} />
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Manual Releases</SlideHeadline>
+
+<Timeline data={splitTestingData} />
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Time investment</SlideHeadline>
+
+| Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases |
+| --------------- | ---------------- | ---------------- | --------------------- | -------- |
+| 11              | 5                | 2                | 1                     | 1        |
+| 14              | 2                | 2                | 2                     | 8        |
+
+<TableCaption>d = days</TableCaption>
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Time investment</SlideHeadline>
+
+| Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases | Bugs   |
+| --------------- | ---------------- | ---------------- | --------------------- | -------- | ------ |
+| 11              | 5                | 2                | 1                     | **1**    | 🐛🐛🐛 |
+| 14              | 2                | 2                | 2                     | **8**    | 🐛🐛   |
+
+<TableCaption>d = days</TableCaption>
+
+---
+
+<SlideHeadline sectionTitle='Story time'>Numbers</SlideHeadline>
+
+High performing organizations:
+
+- Deploy **200** times as often
+- Have a **3** times lower change failure rate
+- Recover **24** times faster from failures
+
+<Credit
+  credit='DevOps Report 2016'
+  creditLink='https://puppet.com/system/files/2016-06/2016%20State%20of%20DevOps%20infographic.pdf'
+/>
+
+<Notes>
+  Every good talk should backup their claims with some empirical evidence.
+  <br />
+  It is all about cycles.
+</Notes>
+
+---
+
+<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
+
+<Timeline data={perfectTestingData} />
+
+---
+
+<SlideHeadline sectionTitle='My dream'>New stats</SlideHeadline>
+
+| Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases | Bugs   |
+| --------------- | ---------------- | ---------------- | --------------------- | -------- | ------ |
+| 11              | 5                | 2                | 1                     | 1        | 🐛🐛🐛 |
+| 14              | 2                | 2                | 2                     | 8        | 🐛🐛   |
+| 18              | 0                | 2                | 0                     | 200      | 🐛     |
+
+<TableCaption>d = days</TableCaption>
+
+<Notes>10 Releases per day. I think even less than a thrid of bugs.</Notes>
+
+---
+
+<SlideHeadline sectionTitle='My dream'>Required actors</SlideHeadline>
+
+<Legend
+  items={[
+    {
+      emoji: '👨‍💻',
+      title: 'Developer',
+    },
+    {
+      emoji: '🧐',
+      title: 'Tester / QA',
+    },
+    {
+      emoji: '🤖',
+      title: 'Computer',
+    },
+  ]}
+/>
+
+---
+
+<SlideHeadline sectionTitle='My dream'>The perfect day</SlideHeadline>
+
+<h1
+style={{
+    display: 'flex',
+    justifyContent: 'space-around',
+    width: '100%',
+  }}><span>👨‍💻</span><span>🤖</span><span>🧐</span></h1>
+
+<Timeline
+  data={[
+    {
+      types: ['development'],
+    },
+    {
+      types: ['testing', 'release'],
+    },
+    {
+      types: ['testing'],
+    },
+  ]}
+/>
+
+<Notes>
+  In a perfect world I focus on coding while testing and release happen
+  automated and in parallel to my work.
+  <br />
+  Meanwhile QA ensures quality.
+</Notes>
+
+---
 
 <Interlude text='Use the right tool for the right job 🔧' />
 
@@ -28,7 +298,7 @@ import OpeningSlide from './components/opening-slide'
 
 <Center>
 
-![Cypress logo](images/cypress-logo.png)
+<img src={CypressLogoImage} alt='Cypress Logo' />
 
 </Center>
 
@@ -54,7 +324,7 @@ import OpeningSlide from './components/opening-slide'
 
 <SlideHeadline sectionTitle='Cypress'>In action</SlideHeadline>
 
-<LargeImage src='images/cypress-example.png' />
+<LargeImage src={CypressExampleImage} />
 
 <Notes>Life demo time.</Notes>
 

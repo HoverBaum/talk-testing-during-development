@@ -3,20 +3,21 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "mdx-deck index.js --port 8282",
+    "start": "mdx-deck deck.mdx --port 8282",
     "build": "rm -rf dist && mdx-deck build index.js && cp -r images dist/images",
     "export": "slides-to-pdf http://localhost:8282",
     "format": "prettier --config .prettierrc.js --write  \"{,!(node_modules)/**/}*.{js, mdx}\""
   },
   "author": "",
   "devDependencies": {
-    "@emotion/core": "^10.0.10",
-    "@hoverbaum/slides-to-pdf": "^0.4.0",
-    "mdx-deck": "^2.0.6",
+    "@emotion/core": "^10.0.15",
+    "@emotion/styled": "^10.0.15",
+    "@hoverbaum/slides-to-pdf": "^0.4.1",
+    "mdx-deck": "^3.0.9",
     "prettier": "1.17.1",
-    "prism-react-renderer": "^0.1.6"
+    "prism-react-renderer": "^0.1.7"
   },
   "dependencies": {
-    "react-particles-js": "^2.6.0"
+    "react-particles-js": "^2.7.0"
   }
 }
