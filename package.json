@@ -18,6 +18,7 @@
     "prism-react-renderer": "^0.1.7"
   },
   "dependencies": {
-    "react-particles-js": "^2.7.0"
+    "react-particles-js": "^2.7.0",
+    "react-wordcloud": "^1.0.8"
   }
 }
