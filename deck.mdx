@@ -81,7 +81,7 @@ import CypressLogoImage from './images/cypress-logo.png'
 
 Developer for fun 🎉
 
-Consultant @ <a href="https://netlight.com" target="_blank">Netlight</a>
+Consultant from <a href="https://netlight.com" target="_blank">Netlight</a>
 
 </CustomSplit>
 
@@ -177,7 +177,7 @@ Consultant @ <a href="https://netlight.com" target="_blank">Netlight</a>
 
 | Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases |
 | --------------- | ---------------- | ---------------- | --------------------- | -------- |
-| 11              | 5                | 2                | 1                     | 1        |
+| 12              | 5                | 2                | 1                     | 1        |
 | 14              | 2                | 2                | 2                     | 8        |
 
 <TableCaption>d = days</TableCaption>
@@ -188,7 +188,7 @@ Consultant @ <a href="https://netlight.com" target="_blank">Netlight</a>
 
 | Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases | Bugs   |
 | --------------- | ---------------- | ---------------- | --------------------- | -------- | ------ |
-| 11              | 5                | 2                | 1                     | **1**    | 🐛🐛🐛 |
+| 12              | 5                | 2                | 1                     | **1**    | 🐛🐛🐛 |
 | 14              | 2                | 2                | 2                     | **8**    | 🐛🐛   |
 
 <TableCaption>d = days</TableCaption>
@@ -216,23 +216,23 @@ High performing organizations:
 
 ---
 
-<SlideHeadline sectionTitle='Story time'>My dream</SlideHeadline>
-
-<Timeline data={perfectTestingData} />
-
----
-
 <SlideHeadline sectionTitle='My dream'>New stats</SlideHeadline>
 
 | Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases | Bugs   |
 | --------------- | ---------------- | ---------------- | --------------------- | -------- | ------ |
-| 11              | 5                | 2                | 1                     | 1        | 🐛🐛🐛 |
+| 12              | 5                | 2                | 1                     | 1        | 🐛🐛🐛 |
 | 14              | 2                | 2                | 2                     | 8        | 🐛🐛   |
 | 18              | 0                | 2                | 0                     | 200      | 🐛     |
 
 <TableCaption>d = days</TableCaption>
 
 <Notes>10 Releases per day. I think even less than a thrid of bugs.</Notes>
+
+---
+
+<SlideHeadline sectionTitle='My dream' />
+
+<Timeline data={perfectTestingData} />
 
 ---
 
@@ -668,20 +668,6 @@ it('should ...', function() {
 
 <SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
 
-Consider what to E2E-test.
-
-Expose APIs from your application.
-
-`.get()` does not need positive assertions.
-
-Speed up your tests by logging in programmatically.
-
-[More best practices](https://docs.cypress.io/guides/references/best-practices.html)
-
----
-
-<SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
-
 ```javascript
 cy.request({
   method: 'POST',
@@ -724,6 +710,32 @@ beforeEach(() => {
   credit='Cypress best practices'
   creditLink='https://docs.cypress.io/guides/references/best-practices.html'
 />
+
+---
+
+<SlideHeadline sectionTitle='Cypress'>Best Practices</SlideHeadline>
+
+Consider what to E2E-test.
+
+Expose APIs from your application.
+
+`.get()` does not need positive assertions.
+
+Speed up your tests by logging in programmatically.
+
+Use [tasks](https://docs.cypress.io/api/commands/task.html#Syntax) to handle background jobs.
+
+[More best practices](https://docs.cypress.io/guides/references/best-practices.html)
+
+---
+
+<SlideHeadline sectionTitle='Cypress'>Caveats</SlideHeadline>
+
+Mocking fetch requests is still difficult ([recipe](https://github.com/cypress-io/cypress-example-recipes/tree/master/examples/stubbing-spying__window-fetch#readme)).
+
+Might need implementation just for tests.
+
+For now only Chrome [#310](https://github.com/cypress-io/cypress/issues/310).
 
 ---
 
