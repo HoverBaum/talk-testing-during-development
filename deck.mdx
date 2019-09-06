@@ -527,7 +527,7 @@ it('should increment multiple times', () => {
 it('should display message on click', () => {
   cy.visit('/')
   cy.get('[data-testid="button-display"]').click()
-  cy.get('[data-testid=display]')
+  cy.get('[data-testid="display"]')
 })
 ```
 
@@ -736,6 +736,8 @@ Mocking fetch requests is still difficult ([recipe](https://github.com/cypress-i
 Might need implementation just for tests.
 
 For now only Chrome [#310](https://github.com/cypress-io/cypress/issues/310).
+
+Danger of Spaghetti code.
 
 ---
 
