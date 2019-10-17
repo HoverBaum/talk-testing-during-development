@@ -1,11 +1,4 @@
 import React from 'react'
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
-
-const quoteStyle = {
-  color: '#cc4a1a',
-  fontSize: '1.2em',
-}
 
 const TableCaption = ({ children }) => (
   <span
