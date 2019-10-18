@@ -19,7 +19,7 @@ const Quote = ({ children, size = 1, onImage }) => {
         left: 50%;
         top: 50%;
         transform: translateX(-50%) translateY(-50%);
-        color: ${onImage ? 'white' : '#334a5e'};
+        color: ${onImage ? 'white' : colors.headline};
       `}
     >
       <span style={quoteStyle}>“</span>

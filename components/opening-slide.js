@@ -22,8 +22,8 @@ const OpeningSlide = ({ title, author, subtitle, title2 }) => {
         css={{
           margin: 0,
           fontSize: '2.5em',
-          color: '#334a5e',
-          borderBottom: '1px solid #334a5e',
+          color: colors.headline,
+          borderBottom: `1px solid ${colors.headline}`,
           paddingBottom: '1rem',
         }}
       >
