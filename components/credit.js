@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
+import useColors from '../lib/useColors'
 
 export const BackgroundImage = ({ credit, creditLink, onImage }) => {
-  const color = onImage ? 'lightgrey' : 'black'
+  const colors = useColors()
+  const color = onImage ? 'lightgrey' : colors.text
   return (
     <div
       css={css`
@@ -15,11 +17,11 @@ export const BackgroundImage = ({ credit, creditLink, onImage }) => {
     >
       <p
         css={css`
-        opacity: 0.66;
-        font-size: small;
-        margin: 0;
-        color;
-      `}
+          opacity: 0.66;
+          font-size: small;
+          margin: 0;
+          color: ${color};
+        `}
       >
         {creditLink ? (
           <a href={creditLink} target='_blank' style={{ color }}>

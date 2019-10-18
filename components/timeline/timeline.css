@@ -1,25 +1,3 @@
-
-.timeline {
-  width: 100%;
-  min-height: 20rem;
-  border: 1px solid #333334;
-  display: flex;
-  flex-direction: row;
-  margin: 2rem auto;
-}
-
-.timeline__day {
-  flex-basis: 100%;
-  border-right: 2px solid #ececec;
-  display: flex;
-  flex-direction: column;
-}
-
-.timeline__day_last,
-.timeline__day_friday {
-  border-right: 0;
-}
-
 .timeline__part {
   padding: 1rem;
   flex-grow: 1;

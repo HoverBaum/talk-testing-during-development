@@ -1,7 +1,10 @@
 import React from 'react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import typeMap from './typeMap'
 
 import './timeline.css'
+import useColors from '../../lib/useColors'
 
 const fillDays = (days, types) =>
   days.map(day => {
@@ -23,40 +26,62 @@ const isLastDay = (day, total) => day === total - 1
 const shouldRenderWeekend = (currentDay, allDays) =>
   isFriday(currentDay) && currentDay < allDays - 1
 
-const Timeline = ({ data = [] }) => (
-  <div className='timeline'>
-    {fillDays(data, typeMap).map((day, index) => (
-      <React.Fragment key={index}>
-        <div
-          className={`timeline__day ${
-            isFriday(index) ? 'timeline__day_friday' : ''
-          } ${isLastDay(index, data.length) ? 'timeline__day_last' : ''}`}
-        >
-          {day.parts.map((part, key) => (
-            <div
-              key={key}
-              className='timeline__part'
-              style={{ backgroundColor: part.color }}
-            >
-              <img
-                src={
-                  part.emojiImg.length.length
-                    ? `images/${part.emojiImg}`
-                    : part.emojiImg
-                }
-                alt={part.type}
-              />
-            </div>
-          ))}
-        </div>
-        {shouldRenderWeekend(index, data.length) ? (
-          <div className='timeline__weekend' />
-        ) : (
-          ''
-        )}
-      </React.Fragment>
-    ))}
-  </div>
-)
+const Timeline = ({ data = [] }) => {
+  const colors = useColors()
+  return (
+    <div
+      className='timeline'
+      css={css`
+        width: 100%;
+        min-height: 20rem;
+        border: 2px solid ${colors.background};
+        display: flex;
+        flex-direction: row;
+        margin: 2rem auto;
+      `}
+    >
+      {fillDays(data, typeMap).map((day, index) => (
+        <React.Fragment key={index}>
+          <div
+            className={`timeline__day ${
+              isFriday(index) ? 'timeline__day_friday' : ''
+            } ${isLastDay(index, data.length) ? 'timeline__day_last' : ''}`}
+            css={css`
+              flex-basis: 100%;
+              border-right: ${isFriday(index) || isLastDay(index, data.length)
+                  ? 0
+                  : 2}px
+                solid ${colors.background};
+              display: flex;
+              flex-direction: column;
+            `}
+          >
+            {day.parts.map((part, key) => (
+              <div
+                key={key}
+                className='timeline__part'
+                style={{ backgroundColor: part.color }}
+              >
+                <img
+                  src={
+                    part.emojiImg.length.length
+                      ? `images/${part.emojiImg}`
+                      : part.emojiImg
+                  }
+                  alt={part.type}
+                />
+              </div>
+            ))}
+          </div>
+          {shouldRenderWeekend(index, data.length) ? (
+            <div className='timeline__weekend' />
+          ) : (
+            ''
+          )}
+        </React.Fragment>
+      ))}
+    </div>
+  )
+}
 
 export default Timeline

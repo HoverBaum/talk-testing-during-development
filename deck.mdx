@@ -1,5 +1,4 @@
 import { Head, Notes } from 'mdx-deck'
-import Wordcloud from 'react-wordcloud'
 
 import myTheme from './lib/theme'
 export const theme = myTheme
@@ -22,6 +21,7 @@ import OpeningSlide from './components/opening-slide'
 import Interlude from './components/interlude'
 import BackgroundBubbles from './components/background-bubbles'
 import TableCaption from './components/table-caption'
+import Wordcloud from './components/wordcloud'
 
 import splitTestingData from './scenarios/splitTesting'
 import perfectTestingData from './scenarios/perfect'
@@ -302,7 +302,6 @@ style={{
     fontFamily: 'sans-serif',
     rotations: 0,
     fontSizes: [80, 150],
-    colors: ['#162521'],
     padding: 10,
   }}
   words={[
@@ -377,13 +376,14 @@ style={{
 
 ```javascript
 // Basic file structure some.spec.js.
-
 /// <reference types="Cypress" />
 
 describe('Some component', () => {
   it('should do something', () => {
     cy.doThings().assert('to.be', true)
   })
+
+  it.only('Only this', () => {})
 })
 ```
 
@@ -574,7 +574,8 @@ it('should increment from previous value', () => {
     .invoke('text')
     .then(text => {
       cy.get('[data-testid="button-increment"]').click()
-      cy.get('[data-testid="count-output"]').contains(parseInt(text) + 1)
+      cy.get('[data-testid="count-output"]') //
+        .contains(parseInt(text) + 1)
     })
 })
 ```
