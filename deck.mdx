@@ -445,26 +445,6 @@ it('should have a headline', () => {
 
 <SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
 
-1. Basic render 🎉
-
-```javascript
-it('should have the right headline', () => {
-  cy.visit('/')
-  cy.get('h1').contains('Testing page')
-})
-```
-
-<Notes>We can find text within an element.</Notes>
-
-<Credit
-  credit='Cypress contains'
-  creditLink='https://docs.cypress.io/api/commands/contains.html'
-/>
-
----
-
-<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
-
 2. Counter logic 🧮
 
 ```javascript
@@ -474,7 +454,11 @@ it('should initially have a count of 0', () => {
 })
 ```
 
-<Notes>Use data-testid to decouple tests from every day development.</Notes>
+<Notes>
+  Use data-testid to decouple tests from every day development.
+  <br />
+  We can find text within an element.
+</Notes>
 
 <Credit
   credit='Testids as a best practice'
@@ -492,10 +476,14 @@ it('should increment', () => {
   cy.visit('/')
   cy.get('[data-testid="button-increment"]').click()
   cy.get('[data-testid="count-output"]').contains('1')
+  cy.get('[data-testid="button-increment"]').click()
+  cy.get('[data-testid="count-output"]').contains('2')
 })
 ```
 
 <Notes>
+  Good tests check multiple / all cases.
+  <br />
   We can interact with elements.
   <br />
   click, type, select, check
@@ -505,23 +493,6 @@ it('should increment', () => {
   credit='Interacting with Elements'
   creditLink='https://docs.cypress.io/guides/core-concepts/interacting-with-elements.html#Actionability'
 />
-
----
-
-<SlideHeadline sectionTitle='Cypress'>Coding</SlideHeadline>
-
-2. Counter logic 🧮
-
-```javascript
-it('should increment multiple times', () => {
-  cy.visit('/')
-  cy.get('[data-testid="button-increment"]').click()
-  cy.get('[data-testid="button-increment"]').click()
-  cy.get('[data-testid="count-output"]').contains('2')
-})
-```
-
-<Notes>Good tests check multiple / all cases.</Notes>
 
 ---
 
@@ -549,23 +520,6 @@ it('should display message on click', () => {
 ---
 
 <Interlude text='Beyond the basics 🚀' />
-
----
-
-<SlideHeadline sectionTitle='Cypress'>Advanced</SlideHeadline>
-
-What to run?
-
-```javascript
-it.only('should only run this', () => {})
-
-it.skip('should skip this', () => {})
-```
-
-<Credit
-  credit='Excluding and Including Tests'
-  creditLink='https://docs.cypress.io/guides/core-concepts/writing-and-organizing-tests.html#Excluding-and-Including-Tests'
-/>
 
 ---
 
@@ -730,7 +684,7 @@ Expose APIs from your application.
 
 Speed up your tests by logging in programmatically.
 
-Use [tasks](https://docs.cypress.io/api/commands/task.html#Syntax) to handle background jobs.
+Use [tasks](https://docs.cypress.io/api/commands/task.html#Syntax) and [reporters](https://docs.cypress.io/guides/tooling/reporters.html#Custom-Reporters).
 
 [More best practices](https://docs.cypress.io/guides/references/best-practices.html)
 
@@ -745,33 +699,6 @@ Might need implementation just for tests.
 For now only Chrome [#310](https://github.com/cypress-io/cypress/issues/310).
 
 Danger of Spaghetti code.
-
----
-
-<SlideHeadline sectionTitle='Cypress'>Reporting</SlideHeadline>
-
-```json
-{
-  "baseUrl": "http://localhost:8888",
-  "reporter": "junit",
-  "reporterOptions": {
-    "mochaFile": "results/test-results-[hash].xml"
-  }
-}
-```
-
-Cypress is build on Mocha and has acccess to all [build in reporters](https://mochajs.org/#reporters).
-
-<Credit
-  credit='Cypress reporter docs'
-  creditLink='https://docs.cypress.io/guides/tooling/reporters.html#Custom-Reporters'
-/>
-
-<Notes>
-  Good moment to mention cypress.json in general.
-  <br />
-  Also remember to delete the results folder before running tests.
-</Notes>
 
 ---
 
