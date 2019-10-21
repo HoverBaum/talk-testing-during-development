@@ -5,6 +5,7 @@ import typeMap from './typeMap'
 
 import './timeline.css'
 import useColors from '../../lib/useColors'
+import useHDC from '../../lib/useHDC'
 
 const fillDays = (days, types) =>
   days.map(day => {
@@ -28,16 +29,18 @@ const shouldRenderWeekend = (currentDay, allDays) =>
 
 const Timeline = ({ data = [] }) => {
   const colors = useColors()
+
   return (
     <div
       className='timeline'
       css={css`
         width: 100%;
         min-height: 20rem;
-        border: 2px solid ${colors.background};
+        border: 2px solid ${colors.text};
         display: flex;
         flex-direction: row;
         margin: 2rem auto;
+        background-color: ${colors.text};
       `}
     >
       {fillDays(data, typeMap).map((day, index) => (
@@ -48,10 +51,9 @@ const Timeline = ({ data = [] }) => {
             } ${isLastDay(index, data.length) ? 'timeline__day_last' : ''}`}
             css={css`
               flex-basis: 100%;
-              border-right: ${isFriday(index) || isLastDay(index, data.length)
-                  ? 0
-                  : 2}px
-                solid ${colors.background};
+              margin-right: ${isFriday(index) || isLastDay(index, data.length)
+                ? 0
+                : 2}px;
               display: flex;
               flex-direction: column;
             `}
