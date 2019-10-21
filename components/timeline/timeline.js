@@ -5,7 +5,6 @@ import typeMap from './typeMap'
 
 import './timeline.css'
 import useColors from '../../lib/useColors'
-import useHDC from '../../lib/useHDC'
 
 const fillDays = (days, types) =>
   days.map(day => {
