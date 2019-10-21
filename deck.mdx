@@ -22,6 +22,7 @@ import Interlude from './components/interlude'
 import BackgroundBubbles from './components/background-bubbles'
 import TableCaption from './components/table-caption'
 import Wordcloud from './components/wordcloud'
+import ModeImage from './components/mode-image'
 
 import splitTestingData from './scenarios/splitTesting'
 import perfectTestingData from './scenarios/perfect'
@@ -38,6 +39,7 @@ import LegendImageTesting from './images/testing-detective.png'
 import LegendImageReleasing from './images/releasing-rocket.png'
 import DetectiveEmojiImage from './images/testing-detective.png'
 import CypressLogoImage from './images/cypress-logo.png'
+import CypressLogoWhiteImage from './images/cypress-logo-white.png'
 
 <Head>
   <title>Testing</title>
@@ -340,7 +342,11 @@ style={{
 
 <Center>
 
-<img src={CypressLogoImage} alt='Cypress Logo' />
+<ModeImage
+  src={CypressLogoImage}
+  darkSrc={CypressLogoWhiteImage}
+  alt='Cypress Logo'
+/>
 
 </Center>
 
