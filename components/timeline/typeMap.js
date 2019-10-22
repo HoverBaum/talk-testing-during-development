@@ -8,32 +8,32 @@ import PerfectDayImage from '../../images/perfect-day.png'
 const typeMap = [
   {
     type: 'release',
-    color: '#253F5A',
+    color: '#4281A4', //'#253F5A',
     emojiImg: RealeasingImage,
   },
   {
     type: 'meeting',
-    color: '#d37883', //'#C48181',
+    color: '#C1666B', //'#d37883',
     emojiImg: MeetingImage,
   },
   {
     type: 'development',
-    color: '#FFE0B5', //'#F6D8AE', //'#F4DE78',
+    color: '#EAD2AC', //'#FFE0B5',
     emojiImg: WorkingImage,
   },
   {
     type: 'freeze',
-    color: '#a8e4f7', //'#9dd7f2', //'#9FE0FA',
+    color: '#D5DFE5', //'#a8e4f7',
     emojiImg: CodeFreezeImage,
   },
   {
     type: 'testing',
-    color: '#933636', // '#a8792a',
+    color: '#DF928E', //'#933636',
     emojiImg: TestingImage,
   },
   {
     type: 'perfect',
-    color: '#FFD670', //'#F9DE47',
+    color: '#FFD670',
     emojiImg: PerfectDayImage,
   },
 ]
