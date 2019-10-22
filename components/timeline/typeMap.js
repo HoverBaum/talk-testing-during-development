@@ -18,7 +18,7 @@ const typeMap = [
   },
   {
     type: 'development',
-    color: '#EAD2AC', //'#FFE0B5',
+    color: '#479e83', //'#FFE0B5',
     emojiImg: WorkingImage,
   },
   {
@@ -28,7 +28,7 @@ const typeMap = [
   },
   {
     type: 'testing',
-    color: '#DF928E', //'#933636',
+    color: '#D5DFE5', //'#933636',
     emojiImg: TestingImage,
   },
   {

@@ -35,11 +35,12 @@ const Timeline = ({ data = [] }) => {
       css={css`
         width: 100%;
         min-height: 20rem;
-        border: 2px solid ${colors.text};
+        border: 2px solid ${colors.background};
+        box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 1);
         display: flex;
         flex-direction: row;
         margin: 2rem auto;
-        background-color: ${colors.text};
+        background-color: ${colors.background};
       `}
     >
       {fillDays(data, typeMap).map((day, index) => (
