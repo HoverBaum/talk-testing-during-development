@@ -1,6 +1,4 @@
 import React from 'react'
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
 import useColors from '../lib/useColors'
 
 // TODO: refactor title2 to accept children so that users can have a bigger impact.

@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "mdx-deck deck.mdx --port 8282",
-    "build": "rm -rf dist && mdx-deck build index.js && cp -r images dist/images",
+    "build": "rm -rf public && mdx-deck build deck.mdx",
     "export": "slides-to-pdf http://localhost:8282",
     "format": "prettier --config .prettierrc.js --write  \"{,!(node_modules)/**/}*.{js, mdx}\""
   },
