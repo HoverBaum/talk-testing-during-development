@@ -41,3 +41,9 @@ npm start
 # In a second shell in the demo-site folder
 npm test
 ```
+
+## Resources
+
+This deck is build using [mdx-deck](https://github.com/jxnblk/mdx-deck).
+
+Animation on opening slide done using [react-particles-js](https://github.com/Wufe/react-particles-js), visit their [demo site](https://rpj.bembi.org/#bubbles) to create something similar.
