@@ -183,23 +183,23 @@ Consultant from <a href="https://netlight.com" target="_blank">Netlight</a>
 
 <SlideHeadline sectionTitle='Story time'>Time investment</SlideHeadline>
 
-|        | Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases |
-| ------ | --------------- | ---------------- | ---------------- | --------------------- | -------- |
-| Freeze | 12              | 5                | 2                | 1                     | 1        |
-| Manual | 14              | 2                | 2                | 2                     | 8        |
+|        | Dev<sup>\*</sup> | Test<sup>\*</sup> | Meet<sup>\*</sup> | Releasing<sup>\*</sup> | Releases |
+| ------ | ---------------- | ----------------- | ----------------- | ---------------------- | -------- |
+| Freeze | 12               | 5                 | 2                 | 1                      | 1        |
+| Manual | 14               | 2                 | 2                 | 2                      | 8        |
 
-<TableCaption>d = days</TableCaption>
+<TableCaption>* in days</TableCaption>
 
 ---
 
 <SlideHeadline sectionTitle='Story time'>Time investment</SlideHeadline>
 
-|        | Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases | Bugs   |
-| ------ | --------------- | ---------------- | ---------------- | --------------------- | -------- | ------ |
-| Freeze | 12              | 5                | 2                | 1                     | **1**    | 🐛🐛🐛 |
-| Manual | 14              | 2                | 2                | 2                     | **8**    | 🐛🐛   |
+|        | Dev<sup>\*</sup> | Test<sup>\*</sup> | Meet<sup>\*</sup> | Releasing<sup>\*</sup> | Releases | Bugs   |
+| ------ | ---------------- | ----------------- | ----------------- | ---------------------- | -------- | ------ |
+| Freeze | 12               | 5                 | 2                 | 1                      | **1**    | 🐛🐛🐛 |
+| Manual | 14               | 2                 | 2                 | 2                      | **8**    | 🐛🐛   |
 
-<TableCaption>d = days</TableCaption>
+<TableCaption>* in days</TableCaption>
 
 ---
 
@@ -226,13 +226,13 @@ High performing organizations:
 
 <SlideHeadline sectionTitle='My dream'>New stats</SlideHeadline>
 
-|        | Dev<sup>d</sup> | Test<sup>d</sup> | Meet<sup>d</sup> | Releasing<sup>d</sup> | Releases | Bugs   |
-| ------ | --------------- | ---------------- | ---------------- | --------------------- | -------- | ------ |
-| Freeze | 12              | 5                | 2                | 1                     | 1        | 🐛🐛🐛 |
-| Manual | 14              | 2                | 2                | 2                     | 8        | 🐛🐛   |
-| Dream  | 18              | 0                | 2                | 0                     | 200      | 🐛     |
+|        | Dev<sup>\*</sup> | Test<sup>\*</sup> | Meet<sup>\*</sup> | Releasing<sup>\*</sup> | Releases | Bugs   |
+| ------ | ---------------- | ----------------- | ----------------- | ---------------------- | -------- | ------ |
+| Freeze | 12               | 5                 | 2                 | 1                      | 1        | 🐛🐛🐛 |
+| Manual | 14               | 2                 | 2                 | 2                      | 8        | 🐛🐛   |
+| Dream  | 18               | 0                 | 2                 | 0                      | 200      | 🐛     |
 
-<TableCaption>d = days</TableCaption>
+<TableCaption>* in days</TableCaption>
 
 <Notes>10 Releases per day. I think even less than a thrid of bugs.</Notes>
 
@@ -538,7 +538,7 @@ it('should display message on click', () => {
 
 ---
 
-<Interlude text='Beyond basics 🚀' />
+<Interlude text='Beyond basics 🛫' />
 
 ---
 
@@ -568,7 +568,7 @@ it('should increment from previous value', () => {
 
 - Cypress returns Promise like values
 
-- You can **not** `await` Cypress commands
+- You can <PrimaryColored>not</PrimaryColored> `await` Cypress commands
 
 - `.then()` to use values from previous commands
 
